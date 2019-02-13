@@ -6,7 +6,7 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/13 14:59:05 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/13 15:03:57 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,9 +48,6 @@ $(NAME): $(OBJECTS)
 
 $(OBJECTS): $(SOURCES) $(INCLUDES)
 	$(CC) -c $(CFLAGS) $< -o $@
-
-# Solution for dependency tracking for object files comes from:
-# http://nuclear.mutantstargoat.com/articles/make/#a-makefile-for-99-of-your-programs
 
 clean:
 	/bin/rm -f $(OBJECTS)

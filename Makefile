@@ -6,7 +6,7 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/13 18:04:11 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/13 22:10:42 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,10 @@ CFLAGS = -Wall -Werror -Wextra -I$(INCLUDES)
 # https://gist.github.com/maxtruxa/4b3929e118914ccef057f8a05c614b0f
 
 # intermediate directory for generated object files
-OBJDIR := .o
+OBJECT_DIR := .o
 
 # object files, auto generated from source files
-OBJECTS := $(patsubst %,$(OBJDIR)/%.o,$(basename $(SOURCE_BASENAMES)))
+OBJECTS := $(patsubst %,$(OBJECT_DIR)/%.o,$(basename $(SOURCE_BASENAMES)))
 
 # compilers (at least gcc and clang) don't create the subdirectories automatically
 $(shell mkdir -p $(dir $(OBJECTS)) >/dev/null)
@@ -46,7 +46,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar -r $@ $^
 
-$(OBJECTS): $(SOURCES) $(INCLUDES)
+$(OBJECT_DIR)/%.o: $(SOURCE_DIR)/%.c $(INCLUDES)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:

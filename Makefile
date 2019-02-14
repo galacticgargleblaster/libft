@@ -6,7 +6,7 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/13 15:03:57 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/13 18:04:11 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,3 +57,6 @@ fclean: clean
 
 re: clean all
 
+test:
+	./.scripts/rules.py
+	

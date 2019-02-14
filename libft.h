@@ -6,9 +6,11 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 23:56:36 by nkirkby           #+#    #+#             */
-/*   Updated: 2018/10/02 04:42:28 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/13 20:03:41 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -23,5 +25,7 @@ void	ft_putchar(char c);
 char	*ft_itoa(long n);
 char	*ft_strdup(char *src);
 char	**ft_split_whitespaces(char *str);
+void	*ft_memset(void *b, int c, size_t len);
+
 
 #endif

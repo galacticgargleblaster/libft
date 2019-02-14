@@ -1,4 +1,4 @@
-#include "../src/ft_atoi.c"
+#include "../libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>

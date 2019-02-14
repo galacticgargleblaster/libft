@@ -6,7 +6,7 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/13 22:10:42 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/13 22:23:28 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar -r $@ $^
 
+# https://stackoverflow.com/questions/38110010/pattern-rule-with-files-in-different-directories
 $(OBJECT_DIR)/%.o: $(SOURCE_DIR)/%.c $(INCLUDES)
 	$(CC) -c $(CFLAGS) $< -o $@
 

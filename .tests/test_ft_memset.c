@@ -3,10 +3,6 @@
 #include <assert.h>
 #include "../libft.h"
 
-/*
-
-*/
-
 #define SOME_MEMORY_SIZE_BYTES 50
 #define THE_VALUE 19
 

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 23:56:36 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/13 21:55:35 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/14 09:58:02 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ char	*ft_strdup(char *src);
 char	**ft_split_whitespaces(char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
-
 
 #endif

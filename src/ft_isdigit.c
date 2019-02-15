@@ -6,14 +6,13 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/14 10:58:20 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/14 12:29:54 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
 #include "../libft.h"
 
-int	isalnum(int c)
+int	isdigit(int c)
 {
-	return (isalpha(c) || isdigit(c));
+	return (IS_DIGIT(c));
 }

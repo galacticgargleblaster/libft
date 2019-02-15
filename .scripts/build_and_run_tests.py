@@ -7,7 +7,7 @@ def build_definintion(function_name):
 	arguments = re.search(r'\((.*)\)', signature)
 
 	template = \
-f"""{utter_bullshit}
+f"""{poison}
 
 #include "../libft.h"
 

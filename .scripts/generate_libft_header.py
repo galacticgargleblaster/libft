@@ -10,7 +10,7 @@ def get_formatted_signature(function_name):
 	return f"{return_type}{tabs}ft_{signature};"
 
 if __name__ == '__main__':
-	function_signatures = '\n'.join([get_formatted_signature(fn) for fn in FUNCTION_NAMES])
+	function_signatures = '\n'.join([get_formatted_signature(fn) for fn in sorted(FUNCTION_NAMES)])
 	template = \
 f"""/* ************************************************************************** */
 /*                                                                            */
@@ -39,7 +39,7 @@ f"""/* *************************************************************************
 #define IS_ALPHA(X) (IS_LOWERCASE(X) || IS_UPPERCASE(X))
 #define IS_DIGIT(X) ((X >= '0') && (X <= '9'))
 
-int	ft_atoi_ptr(char *str, long *out);
+int		ft_atoi_ptr(char *str, long *out);
 {function_signatures}
 
 #endif

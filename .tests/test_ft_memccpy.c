@@ -5,7 +5,7 @@
 #include "../libft.h"
 #include <string.h>
 
-void test(void * (function_under_test)(int ))
+void test(void * (function_under_test)(int ,size_t ))
 {
 	// do tests here
 }

@@ -7,7 +7,13 @@
 
 void test(int (function_under_test)(int ))
 {
-	// do tests here
+	for (int i = 0; i <= 300; i++)
+	{
+		if ((i >= '0' && i <= '9') || (i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z'))
+			assert(function_under_test(i) == 1);
+		else
+			assert(function_under_test(i) == 0);
+	}
 }
 
 int main()

@@ -7,6 +7,7 @@ import subprocess
 import pathlib
 import sys
 import re
+from typing import List 
 
 HERE = os.path.dirname(__file__)
 LIB_DIR = os.path.abspath(os.path.join(HERE, '..'))
@@ -71,3 +72,14 @@ def parse_manpage(function_name):
 	
 	include, return_type, signature = (g.decode('ascii') for g in hmm.groups())
 	return include, return_type, signature
+
+def get_argument_types(arguments: str) -> List[str]:
+	"""
+	takes a string of the form:
+	bzero(void *s, size_t n);
+
+	and returns something of the form:
+	['void *', 'size_t']
+	"""
+	argument_types = re.findall(r'[/( ]((?:unsigned |signed |)(?:int|char|void|size_t) +\**)[a-z]*[,\)]', arguments)
+	return argument_types

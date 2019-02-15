@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/14 12:33:35 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/14 17:34:25 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** - overflows if the number is larger than an int
 */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	long	output;
 	int		sign;

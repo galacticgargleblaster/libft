@@ -20,7 +20,7 @@ f"""{utter_bullshit}
 
 def build_test_definition(function_name):
 	include, return_type, signature = parse_manpage(function_name)
-	argument_types = re.findall(r'[/( ]((?:unsigned |signed |)(?:int|char|void) +\**)[a-z]*[,\)]', signature)
+	argument_types = get_argument_types(signature)
 	template = f"""
 #include <string.h>
 #include <stdlib.h>

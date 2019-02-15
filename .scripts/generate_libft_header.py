@@ -40,6 +40,8 @@ f"""/* *************************************************************************
 #define IS_DIGIT(X) ((X >= '0') && (X <= '9'))
 
 int		ft_atoi_ptr(char *str, long *out);
+void	ft_putchar(char c);
+void	ft_puts(char *str);
 {function_signatures}
 
 #endif

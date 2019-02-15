@@ -26,6 +26,8 @@
 #define IS_DIGIT(X) ((X >= '0') && (X <= '9'))
 
 int		ft_atoi_ptr(char *str, long *out);
+void	ft_putchar(char c);
+void	ft_puts(char *str);
 int		ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);

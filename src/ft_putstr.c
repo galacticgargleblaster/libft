@@ -6,13 +6,13 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 13:13:00 by nkirkby           #+#    #+#             */
-/*   Updated: 2018/10/02 04:03:16 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/15 09:44:33 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putstr(char *str)
+void	ft_puts(char *str)
 {
 	int i;
 

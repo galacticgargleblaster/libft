@@ -63,6 +63,9 @@ get_test_name = lambda function_name: os.path.join(TESTS_DIR, f'test_ft_{functio
 get_source_name = lambda function_name: os.path.join(SRC_DIR, f'ft_{function_name}.c')
 
 def parse_manpage(function_name):
+	"""
+	todo: grep for correct function.  Some manpages contain multiple functions (e.g. man strcpy)
+	"""
 	man = subprocess.Popen(('man', function_name), stdout=subprocess.PIPE)
 	col = subprocess.Popen(('col', '-b'), stdin=man.stdout, stdout=subprocess.PIPE)
 	man.stdout.close()

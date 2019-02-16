@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/16 11:32:53 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/16 14:23:41 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,5 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 #endif
+
+

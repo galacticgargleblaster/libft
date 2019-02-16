@@ -13,7 +13,7 @@ HERE = os.path.dirname(__file__)
 LIB_DIR = os.path.abspath(os.path.join(HERE, '..'))
 SRC_DIR = LIB_DIR
 TESTS_DIR = os.path.abspath(os.path.join(HERE, '..', '.tests'))
-TEST_EXECUTABLE_DIR = os.path.abspath(os.path.join(HERE, '..', 'test_output'))
+TEST_EXECUTABLE_DIR = os.path.abspath(os.path.join(HERE, '..', '.test_output'))
 
 FUNCTION_NAMES = \
 ['memset',
@@ -68,23 +68,22 @@ BASE_TYPES = 'char|int|void|size_t'
 
 def parse_manpage(function_name):
 	"""
-	fff need to handle restrict keyword aswell
+	regexes enough information out of a manpage to generate some mostly normal c code
 	"""
 	man = subprocess.Popen(('man', function_name), stdout=subprocess.PIPE)
 	col = subprocess.Popen(('col', '-b'), stdin=man.stdout, stdout=subprocess.PIPE)  # removes ^H backspace sequences
 	man.stdout.close()
 	manpage = col.communicate()[0].decode('ascii')
 
-	# capture groups are ['base type', 'string of **', '(full list, of arguments)']
-#	BFR = f'(#include\s<.*>).+?((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)*(?:\\n)\s*(?:{function_name})(\(.+?\))'
 	BFR = f'(#include\s<.*>)[\w\W]*((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)(?:\\n)\s*(?:{function_name})(\(.+?\))'
 	include, base_type, pointers, argument_str = re.search(BFR, manpage).groups()
 
 	arguments = []
+	# another BFR is needed to lex the arguments
 	another_BFR = f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)\s*([a-z\d]+)'
-	#				  f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s{0,1}(\**)\s{0,1}([a-z]+)'
 	for m in re.finditer(another_BFR, argument_str):
 		arguments.append(m.groups())
+
 	return include, base_type, pointers, arguments
 
 def get_argument_types(arguments: str) -> List[str]:

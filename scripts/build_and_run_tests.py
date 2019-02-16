@@ -9,7 +9,7 @@ def build_definintion(function_name):
 	template = \
 f"""{poison}
 
-#include "../libft.h"
+#include "libft.h"
 
 {return_type}\tft_{function_name}{arguments}
 {{
@@ -73,7 +73,7 @@ def assert_test_passes(function_name):
 		test_source_file_basename.split('.')[0]
 	)
 	compilation_args = [
-		"clang", test_source_file_path, 
+		"clang", "-Wall", "-Werror", "-Wextra", test_source_file_path, 
 		"-lft", "-L", LIB_DIR, 
 		"-o", test_executable_path
 	]
@@ -87,7 +87,7 @@ def assert_test_passes(function_name):
 		raise
 
 	try:
-		subprocess.check_call(test_executable_path, cwd=TEST_EXECUTABLE_DIR)
+		subprocess.check_call(test_executable_path, cwd=TEST_EXECUTABLE_DIR, stdout=sys.stdout)
 		print(f" runs")
 	except:
 		raise

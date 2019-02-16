@@ -4,6 +4,7 @@
 #include <assert.h>
 #include "../libft.h"
 #include <ctype.h>
+#include "unity.h"
 
 void test(int (function_under_test)(int ))
 {
@@ -18,7 +19,9 @@ void test(int (function_under_test)(int ))
 
 int main()
 {
-	test(&isalnum);
-	test(&ft_isalnum);
+	UNITY_BEGIN();
+	RUN_TEST(test(isalnum)); 
+	RUN_TEST(test, &ft_isalnum); 
+	UNITY_END();
 }
 	

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include "unity.h"
 
 /*
 **	The real atoi returns zero for any string that doesn't start with a +, -, or [0,9]
@@ -9,7 +10,7 @@
 
 #define COMPARE(X) (assert(atoi(X) == ft_atoi(X)))
 
-int main()
+void test()
 {
 	COMPARE("--23");
 	COMPARE("256a99999");
@@ -23,4 +24,12 @@ int main()
 	COMPARE("42amis");
 	COMPARE("-20toto12");
 	COMPARE("   23");
+	TEST_ASSERT(0);
+}
+
+int main(void)
+{
+	UNITY_BEGIN();
+	RUN_TEST(test);
+	return UNITY_END();
 }

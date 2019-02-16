@@ -45,6 +45,7 @@ FUNCTION_NAMES = \
 'toupper',
 'tolower']
 
+
 # http://nicjam.es/why-the-42-header-is-poisonous/
 poison = \
 """/* ************************************************************************** */
@@ -72,25 +73,21 @@ def parse_manpage(function_name):
 	man = subprocess.Popen(('man', function_name), stdout=subprocess.PIPE)
 	col = subprocess.Popen(('col', '-b'), stdin=man.stdout, stdout=subprocess.PIPE)  # removes ^H backspace sequences
 	man.stdout.close()
-	manpage = col.communicate()[0]
+	manpage = col.communicate()[0].decode('ascii')
 
-	includes = re.search(b'(#include\s<.*>)', manpage)
-
-	
-	import ipdb; ipdb.set_trace()
 	# capture groups are ['base type', 'string of **', '(full list, of arguments)']
-	BFR = f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s(\**)(?:\\n)\s*(?:{function_name})(\(.+?\))'.encode()
-	base_type, pointers, argument_str = re.search(BFR, manpage).groups()
+#	BFR = f'(#include\s<.*>).+?((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)*(?:\\n)\s*(?:{function_name})(\(.+?\))'
+	BFR = f'(#include\s<.*>)[\w\W]*((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)(?:\\n)\s*(?:{function_name})(\(.+?\))'
+	include, base_type, pointers, argument_str = re.search(BFR, manpage).groups()
 
 	arguments = []
-	another_BFR = f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)\s([a-z]+)'.encode()
+	another_BFR = f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)\s*([a-z\d]+)'
+	#				  f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s{0,1}(\**)\s{0,1}([a-z]+)'
 	for m in re.finditer(another_BFR, argument_str):
-		arguments.append([g.decode('ascii') for g in m.groups()])
-
-	import ipdb; ipdb.set_trace()
-	
-	include, return_type, signature = (g.decode('ascii') for g in hmm.groups())
-	return include, return_type, signature
+		arguments.append(m.groups())
+	if function_name == 'strdup':
+		import ipdb; ipdb.set_trace()
+	return include, base_type, pointers, arguments
 
 def get_argument_types(arguments: str) -> List[str]:
 	"""

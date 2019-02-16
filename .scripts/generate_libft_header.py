@@ -3,11 +3,15 @@
 from core import *
 
 N_TABS = 2
+tabs = '\t' * N_TABS
 
 def get_formatted_signature(function_name):
-	include, return_type, signature = parse_manpage(function_name)
-	tabs = '\t' * N_TABS
-	return f"{return_type}{tabs}ft_{signature};"
+	try:
+		include, return_type, deref_operators, arguments = parse_manpage(function_name)
+	except:
+		import ipdb; ipdb.set_trace()	
+	formatted_arguments = [f'{t} {deref}{ident}' for (t, deref, ident) in arguments]
+	return f"{return_type}{tabs}{deref_operators}ft_{function_name}({', '.join(formatted_arguments)});"
 
 if __name__ == '__main__':
 	function_signatures = '\n'.join([get_formatted_signature(fn) for fn in sorted(FUNCTION_NAMES)])
@@ -29,9 +33,10 @@ f"""{poison}
 #define IS_ALPHA(X) (IS_LOWERCASE(X) || IS_UPPERCASE(X))
 #define IS_DIGIT(X) ((X >= '0') && (X <= '9'))
 
-int		ft_atoi_ptr(char *str, long *out);
-void	ft_putchar(char c);
-void	ft_puts(char *str);
+int{tabs}ft_atoi_ptr(char *str, long *out);
+void{tabs}ft_putchar(char c);
+void{tabs}ft_puts(char *str);
+
 {function_signatures}
 
 #endif

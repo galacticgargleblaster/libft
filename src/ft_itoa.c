@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/16 11:25:34 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/16 11:33:16 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_itoa(long n)
 	char	*str;
 
 	if (n == -2147483648)
-		return (&(ft_strdup("-2147483648")));
+		return (ft_strdup("-2147483648"));
 	tmpn = n;
 	len = 2;
 	negative = 0;

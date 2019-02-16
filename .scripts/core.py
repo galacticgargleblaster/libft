@@ -85,8 +85,6 @@ def parse_manpage(function_name):
 	#				  f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s{0,1}(\**)\s{0,1}([a-z]+)'
 	for m in re.finditer(another_BFR, argument_str):
 		arguments.append(m.groups())
-	if function_name == 'strdup':
-		import ipdb; ipdb.set_trace()
 	return include, base_type, pointers, arguments
 
 def get_argument_types(arguments: str) -> List[str]:

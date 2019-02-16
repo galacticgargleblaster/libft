@@ -11,7 +11,7 @@ from typing import List
 
 HERE = os.path.dirname(__file__)
 LIB_DIR = os.path.abspath(os.path.join(HERE, '..'))
-SRC_DIR = os.path.abspath(os.path.join(HERE, '..', 'src'))
+SRC_DIR = LIB_DIR
 TESTS_DIR = os.path.abspath(os.path.join(HERE, '..', '.tests'))
 TEST_EXECUTABLE_DIR = os.path.abspath(os.path.join(HERE, '..', 'test_output'))
 

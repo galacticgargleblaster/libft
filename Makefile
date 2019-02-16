@@ -6,13 +6,13 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/14 18:26:06 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/16 11:38:07 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SOURCE_DIR = src
+SOURCE_DIR = .
 SOURCES = $(wildcard $(SOURCE_DIR)/*.c)
 SOURCE_BASENAMES = $(notdir $(SOURCES))
 

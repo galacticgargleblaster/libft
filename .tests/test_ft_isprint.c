@@ -5,14 +5,12 @@
 #include "../libft.h"
 #include <ctype.h>
 
-void test(int (function_under_test)(int ))
-{
-	// do tests here
-}
 
 int main()
 {
-	test(&isprint);
-	test(&ft_isprint);
+	for (int i = 0; i < 255; i++)
+	{
+		assert(ft_isprint(i) == isprint(i));
+	}
 }
 	

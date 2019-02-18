@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/14 18:24:36 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/16 19:36:58 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
 	i = 0;
 	while (i < n)
 	{
-		if (((char*)src)[i] == c)
+		if (((unsigned char*)src)[i] == (unsigned char)c)
 			return (void *)(src + i + 1);
-		((char*)dst)[i] = ((char*)src)[i];
+		((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
 		i++;
 	}
 	return (NULL);

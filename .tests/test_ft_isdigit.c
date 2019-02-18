@@ -7,7 +7,10 @@
 
 void test(int (function_under_test)(int ))
 {
-	// do tests here
+	assert(function_under_test('1') == 1);	
+	assert(function_under_test('9') == 1);
+	assert(function_under_test(0) == 0);
+	assert(function_under_test('a') == 0);
 }
 
 int main()

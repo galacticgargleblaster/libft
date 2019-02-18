@@ -80,7 +80,7 @@ def parse_manpage(function_name):
 
 	arguments = []
 	# another BFR is needed to lex the arguments
-	another_BFR = f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)\s*([a-z\d]+)'
+	another_BFR = f'((?:(?:const)\s|)(?:{BASE_TYPES}))\s*(\**)(?:restrict)*\s*([a-z\d]+)'
 	for m in re.finditer(another_BFR, argument_str):
 		arguments.append(m.groups())
 

@@ -5,9 +5,9 @@
 #include "../libft.h"
 #include <ctype.h>
 
-void test(int (function_under_test)(int ))
+void test(int (function_under_test)(int c))
 {
-	// do tests here
+	(void)function_under_test;
 }
 
 int main()

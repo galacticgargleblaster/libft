@@ -5,9 +5,9 @@
 #include "../libft.h"
 #include <string.h>
 
-void test(size_t (function_under_test)(char *))
+void test(size_t (function_under_test)(const char *s))
 {
-	// do tests here
+	(void)function_under_test;
 }
 
 int main()

@@ -19,8 +19,8 @@ f"""{poison}
 	return template
 
 def build_test_definition(function_name):
-	include, return_type, signature = parse_manpage(function_name)
-	argument_types = get_argument_types(signature)
+	include, return_type, deref_operators, arguments = parse_manpage(function_name)
+	formatted_arguments = [f'{t} {deref}{ident}' for (t, deref, ident) in arguments]
 	template = f"""
 #include <string.h>
 #include <stdlib.h>
@@ -28,9 +28,9 @@ def build_test_definition(function_name):
 #include "../libft.h"
 {include}
 
-void test({return_type} (function_under_test)({','.join(argument_types)}))
+void test({return_type} {deref_operators}(function_under_test)({', '.join(formatted_arguments)}))
 {{
-	// do tests here
+	(void)function_under_test;
 }}
 
 int main()
@@ -92,7 +92,11 @@ def assert_test_passes(function_name):
 		subprocess.check_call(test_executable_path, cwd=TEST_EXECUTABLE_DIR, stdout=sys.stdout)
 		print(f" runs")
 	except:
-		raise
+		print("fail.  compiling with debug flags")
+		compilation_args.append('-g')
+		subprocess.check_call(compilation_args, cwd=HERE)
+		subprocess.check_call(['lldb', test_executable_path], cwd=TEST_EXECUTABLE_DIR)
+
 	
 if __name__ == '__main__':
 	for function_name in sorted(FUNCTION_NAMES):

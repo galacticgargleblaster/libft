@@ -10,7 +10,7 @@ def get_formatted_signature(function_name):
 		include, return_type, deref_operators, arguments = parse_manpage(function_name)
 	except:
 		import ipdb; ipdb.set_trace()
-	formatted_arguments = [f'{t.replace("restrict", "")} {deref}{ident}' for (t, deref, ident) in arguments]
+	formatted_arguments = [f'{t} {deref}{ident}' for (t, deref, ident) in arguments]
 	print(arguments)
 	return f"{return_type}{tabs}{deref_operators}ft_{function_name}({', '.join(formatted_arguments)});"
 

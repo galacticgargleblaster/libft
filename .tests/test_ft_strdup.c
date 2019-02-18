@@ -1,8 +1,18 @@
-#include <stdio.h>
-#include "../ex00/ft_strdup.c"
+
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include "../libft.h"
+#include <string.h>
+
+void test(char *(function_under_test)(const char *s1))
+{
+	(void)function_under_test;
+}
 
 int main()
 {
-	char *my_str = "Hello";	
-	*ft_strdup(my_str);
+	test(&strdup);
+	test(&ft_strdup);
 }
+	

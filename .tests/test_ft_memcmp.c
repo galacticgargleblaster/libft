@@ -5,9 +5,13 @@
 #include "../libft.h"
 #include <string.h>
 
-void test(int (function_under_test)())
+void test(int (function_under_test)(const void *s1, const void *s2, size_t n))
 {
-	// do tests here
+	char foo[] = "012345";
+	char bar[] = "012245";
+
+	int diff = function_under_test(foo, bar, 6);
+	assert(diff == 1);
 }
 
 int main()

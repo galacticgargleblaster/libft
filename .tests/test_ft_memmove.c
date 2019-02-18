@@ -14,6 +14,12 @@ void test(void *(function_under_test)(void *dst, const void *src, size_t len))
 	assert(ptr == bar);
 	assert(foo[3] == '0');
 	assert(foo[5] == '2');
+
+	char *phaedrus = "Phaedrus";
+	char buf[0xFF];
+	memcpy(buf, phaedrus, strlen(phaedrus));
+	function_under_test(buf + 3, buf, strlen(phaedrus));
+	assert(strcmp(&buf[3], phaedrus) == 0);
 }
 
 int main()

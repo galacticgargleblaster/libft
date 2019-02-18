@@ -7,7 +7,12 @@
 
 void test(char *(function_under_test)(char *dst, const char *src))
 {
-	(void)function_under_test;
+	char dst[40];
+
+	char *str = "Socrates was Plato's student\n\r";
+	char *ret = function_under_test(dst, str);
+	assert(ret == dst);
+	assert(strcmp(dst, str) == 0);
 }
 
 int main()

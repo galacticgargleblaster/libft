@@ -6,7 +6,7 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/16 14:38:02 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/17 23:26:06 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,6 @@ $(shell mkdir -p $(dir $(OBJECTS)) >/dev/null)
 # Suffix rules are the old-fashioned way of defining implicit rules for make.
 # Suffix rules are obsolete because pattern rules are more general and clearer.
 # They are supported in GNU make for compatibility with old makefiles.
-
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
@@ -61,3 +60,5 @@ re: clean all
 test:
 	./scripts/build_and_run_tests.py
 	
+debug: CFLAGS += -g
+debug: all

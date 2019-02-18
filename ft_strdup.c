@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 09:01:14 by nkirkby           #+#    #+#             */
-/*   Updated: 2018/10/02 04:02:16 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/17 22:17:02 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_strdup(char *src)
 			copy[i] = src[i];
 			i++;
 		}
+		copy[i] = 0;
 	}
 	return (copy);
 }

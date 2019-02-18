@@ -25,4 +25,19 @@ int main()
 	COMPARE("   23");
 	COMPARE("\t\v\f\r\n \f-06050");
 	COMPARE("\t\v\f\r\n \f- \f\t\n\r    06050");
+	
+	// Brush the teeth with inputs around __LONG_MAX__
+	char buf[100];
+	for (unsigned long long i = __LONG_MAX__ - 5; i < __LONG_MAX__ + 5ULL; i++)
+	{
+		sprintf(buf, "%llu", i);
+		//printf("%d\t%d\t%s\n", ft_atoi(buf), atoi(buf), buf);
+		COMPARE(buf);
+	}
+	for (unsigned long long i = __LONG_MAX__ - 5; i < __LONG_MAX__ + 5ULL; i++)
+	{
+		sprintf(buf, "-%llu", i);
+		//printf("%d\t%d\t%s\n", ft_atoi(buf), atoi(buf), buf);
+		COMPARE(buf);
+	}
 %>

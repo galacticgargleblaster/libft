@@ -11,7 +11,6 @@ def get_formatted_signature(function_name):
 	except:
 		import ipdb; ipdb.set_trace()
 	formatted_arguments = [f'{t} {deref}{ident}' for (t, deref, ident) in arguments]
-	print(arguments)
 	return f"{return_type}{tabs}{deref_operators}ft_{function_name}({', '.join(formatted_arguments)});"
 
 if __name__ == '__main__':
@@ -33,6 +32,13 @@ f"""{poison}
 #define IS_UPPERCASE(X) ((X >= 'A') && (X <= 'Z'))
 #define IS_ALPHA(X) (IS_LOWERCASE(X) || IS_UPPERCASE(X))
 #define IS_DIGIT(X) ((X >= '0') && (X <= '9'))
+
+typedef struct s_list
+{{
+{tabs}void *content;
+{tabs}size_t content_size;
+{tabs}struct s_list *next;
+}}{tabs}t_list;
 
 int{tabs}ft_atoi_ptr(char *str, long *out);
 void{tabs}ft_putchar(char c);

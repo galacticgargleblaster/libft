@@ -6,16 +6,13 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 18:54:44 by nkirkby           #+#    #+#             */
-/*   Updated: 2018/10/02 00:06:35 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 02:34:32 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-		i++;
-	return (s1[i] - s2[i]);
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	return (ft_strncmp(s1, s2, MAX(ft_strlen(s1), ft_strlen(s2))));
 }

@@ -4,6 +4,7 @@
 #include <assert.h>
 #include "../libft.h"
 #include <string.h>
+#include <stdio.h>
 
 void test(size_t (function_under_test)(char *, const char *, size_t dstsize))
 {
@@ -31,10 +32,25 @@ void test(size_t (function_under_test)(char *, const char *, size_t dstsize))
 	function_under_test(dst, src, 5);
 	assert(strcmp(dst, "___a") == 0);
 
+	// Even though the buffer is too small, strlen(dst) + strlen(src) should be returned
 	char too_small[4] = "";
 	size_t size = function_under_test(too_small, "too long", 4);
 	assert(size == 8);
 
+#define		STRING_1	"a\0I"
+#define		STRING_2	"there is no starsss in the"
+
+	// this is some particularly weird behavior.
+	// the entire has_null_byte string should get copied
+	// the returned length should be 3.
+				char	*str = STRING_1;
+			char	buff1[0xF00] = STRING_2;
+	size_t	max = strlen(str) + 4;
+
+	size_t r = function_under_test(buff1, str, max);
+	// in the case that dstsize is less than the length of destination string
+	// the function should return the length of the source string plus dstsize
+	assert(r == 6); 
 }
 
 int main()

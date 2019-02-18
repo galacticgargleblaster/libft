@@ -7,7 +7,20 @@
 
 void test(char *(function_under_test)(const char *haystack, const char *needle))
 {
-	(void)function_under_test;
+	char 	h0[] = "FOFOO";
+	char	n0[] = "FOO";
+
+	char	*result = function_under_test(h0, n0);
+	assert(result == &h0[2]);
+
+	char	h1[] = "hmm FF ok FF";
+	char	n1[] = "FF";
+
+	result = function_under_test(h1, n1);
+	assert(result == &h1[4]);
+
+	result = function_under_test(n1, h1);
+	assert(result == NULL);
 }
 
 int main()

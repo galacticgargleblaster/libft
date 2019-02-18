@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/15 11:46:22 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 03:03:05 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,18 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	n_idx;
-	size_t	h_idx;
-	char	is_match;
+	size_t	idx;
+	size_t	max;
 
-	h_idx = 0;
-	while (haystack[h_idx])
+	idx = 0;
+	if ((ft_strlen(haystack) < ft_strlen(needle)) || (len < ft_strlen(needle)))
+		return (NULL);
+	max = MIN(ft_strlen(haystack) - ft_strlen(needle), len);
+	while (idx <= max)
 	{
-		is_match = 1;
-		n_idx = 0;
-		while (haystack[h_idx + n_idx] && needle[n_idx] && is_match)
-		{
-			if (haystack[h_idx + n_idx] != needle[n_idx])
-				is_match = 0;
-			if (h_idx + n_idx > len)
-				return (NULL);
-			n_idx++;
-		}
-		if (is_match && (needle[n_idx] == 0))
-			return (char*)(haystack + n_idx);
-		h_idx++;
+		if (ft_strncmp(needle, (haystack + idx), ft_strlen(needle)) == 0)
+			return ((char*)(haystack + idx));
+		idx++;
 	}
 	return (NULL);
 }

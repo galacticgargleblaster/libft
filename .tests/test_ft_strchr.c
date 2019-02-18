@@ -7,7 +7,10 @@
 
 void test(char *(function_under_test)(const char *s, int c))
 {
-	(void)function_under_test;
+	char foo[] = "asf";
+
+	assert(function_under_test(foo, 'a') == &foo[0]);
+	assert(function_under_test(foo, 0) == &foo[3]);
 }
 
 int main()

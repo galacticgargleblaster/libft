@@ -6,14 +6,15 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 03:30:51 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 14:41:38 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 #define IS_SIGN(X) (X == '+' || X == '-')
-#define IS_WHITESPACE(X) (X == '\t' || X == '\v' || X == '\f' || X == '\n')
+#define IS_WHITESPACE(X) (ft_strchr("\t\v\f\r\n ", (int)X) != NULL)
+
 
 /*
 ** The real atoi:
@@ -31,7 +32,7 @@ int	ft_atoi(const char *str)
 
 	output = 0;
 	sign = 1;
-	while (*str == ' ' || IS_WHITESPACE(*str))
+	while (IS_WHITESPACE(*str))
 		str++;
 	if (!(IS_DIGIT(*str) || IS_SIGN(*str)))
 		return (0);

@@ -10,7 +10,7 @@
 #define COMPARE(X) (assert(atoi(X) == ft_atoi(X)))
 
 int main()
-{
+<%
 	COMPARE("--23");
 	COMPARE("256a99999");
 	COMPARE("-40000000000000");
@@ -24,4 +24,5 @@ int main()
 	COMPARE("-20toto12");
 	COMPARE("   23");
 	COMPARE("\t\v\f\r\n \f-06050");
-}
+	COMPARE("\t\v\f\r\n \f- \f\t\n\r    06050");
+%>

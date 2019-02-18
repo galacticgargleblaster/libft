@@ -2,7 +2,7 @@
 
 from core import *
 
-def build_definintion(function_name):
+def build_definition(function_name):
 	include, return_type, signature = parse_manpage(function_name)
 	arguments = re.search(r'\((.*)\)', signature)
 
@@ -48,7 +48,7 @@ def assert_definition_exists(function_name):
 	except FileExistsError:
 		if os.stat(filename).st_size == 0:
 			with open(filename, 'w') as fd:
-				fd.write(build_definintion(function_name))
+				fd.write(build_definition(function_name))
 
 	assert os.path.basename(filename) in os.listdir(SRC_DIR), f"No {filename} found"
 

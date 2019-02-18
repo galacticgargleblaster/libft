@@ -23,4 +23,5 @@ int main()
 	COMPARE("42amis");
 	COMPARE("-20toto12");
 	COMPARE("   23");
+	COMPARE("\t\v\f\r\n \f-06050");
 }

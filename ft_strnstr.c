@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 03:03:05 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 03:22:55 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	idx = 0;
 	if ((ft_strlen(haystack) < ft_strlen(needle)) || (len < ft_strlen(needle)))
 		return (NULL);
-	max = MIN(ft_strlen(haystack) - ft_strlen(needle), len);
+	max = MIN(ft_strlen(haystack) - ft_strlen(needle), len - ft_strlen(needle));
 	while (idx <= max)
 	{
 		if (ft_strncmp(needle, (haystack + idx), ft_strlen(needle)) == 0)

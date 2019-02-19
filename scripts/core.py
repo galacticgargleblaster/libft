@@ -14,6 +14,7 @@ LIB_DIR = os.path.abspath(os.path.join(HERE, '..'))
 SRC_DIR = LIB_DIR
 TESTS_DIR = os.path.abspath(os.path.join(HERE, '..', '.tests'))
 TEST_EXECUTABLE_DIR = os.path.abspath(os.path.join(HERE, '..', '.test_output'))
+HEADER_FILE = os.path.join(LIB_DIR, "libft.h")
 
 FUNCTION_NAMES = \
 ['memset',
@@ -86,13 +87,16 @@ def parse_manpage(function_name):
 
 	return include, base_type, pointers, arguments
 
-def get_argument_types(arguments: str) -> List[str]:
+def	parse_header(filepath: str):
 	"""
-	takes a string of the form:
-	bzero(void *s, size_t n);
+	returns a list of function definitions, parsed from the prototypes in the header
+	"""
+	LINE_REGEX = f'({BASE_TYPES})\s*(\**)([a-z_]*)(\(.+?\))'
 
-	and returns something of the form:
-	['void *', 'size_t']
-	"""
-	argument_types = re.findall(r'[/( ]((?:unsigned |signed |)(?:int|char|void|size_t) +\**)[a-z]*[,\)]', arguments)
-	return argument_types
+	functions = []
+	with open(filepath, 'r') as header:
+		for line in header:
+			match = re.search(LINE_REGEX, line)
+			if match:
+				functions.append(match.groups())
+	return functions

@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/13 14:56:17 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 19:56:27 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Outputs the string s to the standard output followed by a ’\n’.
+**
+** Param. #1 The string to output.
+** Return value None.
+*/
 
 #include "libft.h"
 
 void	ft_putendl(char const *s)
 {
-
+	ft_putendl_fd(s, 1);		
 }

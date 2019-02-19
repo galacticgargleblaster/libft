@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/13 14:56:17 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 19:53:01 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Outputs the char c to the file descriptor fd.
+**
+** Param. #1 The character to output.
+** Param. #2 The file descriptor.
+** Return value None.
+*/
 
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
-
+	write(fd, &c, 1);
 }

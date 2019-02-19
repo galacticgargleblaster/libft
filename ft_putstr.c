@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 13:13:00 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 00:10:59 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 19:55:08 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	ft_putstr_fd(str, 1);
 }

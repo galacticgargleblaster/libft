@@ -6,13 +6,14 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/22 10:48:06 by mkang             #+#    #+#             */
-/*   Updated: 2018/10/01 10:27:33 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 19:52:48 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	ft_putchar_fd(c, 1);
 }

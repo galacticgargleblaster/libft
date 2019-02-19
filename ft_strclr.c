@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 16:43:02 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 20:58:39 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@
 
 void	ft_strclr(char *s)
 {
-	ft_memset(s, 0, ft_strlen(s));
+	if (s)
+		ft_memset(s, 0, ft_strlen(s));
 }

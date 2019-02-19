@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 17:13:06 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 21:13:24 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*fresh;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	fresh = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
-	ft_strcat(fresh, s1);
-	ft_strcat(fresh, s2);
+	if (fresh)
+	{
+		ft_strcat(fresh, s1);
+		ft_strcat(fresh, s2);
+	}
 	return (fresh);
 }

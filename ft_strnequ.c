@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 17:07:50 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 21:08:22 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	if ((s1 == NULL) || (s2 == NULL))
+		return (0);
 	return (ft_strncmp(s1, s2, n) == 0);
 }

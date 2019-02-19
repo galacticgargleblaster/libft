@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 15:27:07 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 16:29:55 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,34 +77,4 @@ int	ft_atoi(const char *str)
 	}
 	output *= sign;
 	return (int)(output);
-}
-
-/*
-**	This version of atoi mutates a pointed-to integer
-**	Returns 0 if succesful, other if the argument is invalid.
-*/
-
-int	ft_atoi_ptr(char *str, long *out)
-{
-	long	output;
-	int		sign;
-
-	output = 0;
-	sign = 1;
-	while (*str == ' ')
-		str++;
-	if (!(IS_DIGIT(*str) || IS_SIGN(*str)))
-		return (-1);
-	if (IS_SIGN(*str))
-		sign = *str++ == '-' ? -1 : 1;
-	if (!IS_DIGIT(*str))
-		return (-1);
-	while (*str && IS_DIGIT(*str))
-	{
-		output *= 10;
-		output += (int)(*str++ - '0');
-	}
-	output *= sign;
-	*out = (output);
-	return (0);
 }

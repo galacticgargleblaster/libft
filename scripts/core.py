@@ -65,7 +65,7 @@ poison = \
 get_test_name = lambda function_name: os.path.join(TESTS_DIR, f'test_ft_{function_name}.c')
 get_source_name = lambda function_name: os.path.join(SRC_DIR, f'ft_{function_name}.c')
 
-BASE_TYPES = 'char|int|void|size_t'
+BASE_TYPES = 'char|int|void|size_t|t_list'
 
 def parse_manpage(function_name):
 	"""
@@ -91,7 +91,7 @@ def	parse_header(filepath: str):
 	"""
 	returns a list of function definitions, parsed from the prototypes in the header
 	"""
-	LINE_REGEX = f'({BASE_TYPES})\s*(\**)([a-z_]*)(\(.+?\))'
+	LINE_REGEX = f'({BASE_TYPES})\s*(\**)([a-z_]*)(\(.*\));'
 
 	functions = []
 	with open(filepath, 'r') as header:

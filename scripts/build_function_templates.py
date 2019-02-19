@@ -55,11 +55,16 @@ KILLEM =[
 'ft_putstr_fd',
 'ft_putendl_fd',
 'ft_putnbr_fd',
-'ft_atoi_ptr',
 'ft_lstdelone',
 'ft_lstdel',
 'ft_lstadd',
 'ft_lstiter']
+
+# for f in KILLEM:
+# 	try:
+# 		os.remove(os.path.join(SRC_DIR, f"{f}.c"))
+# 	except Exception as e:
+# 		print(e)
 
 if __name__ == '__main__':
 	functions = parse_header(HEADER_FILE)

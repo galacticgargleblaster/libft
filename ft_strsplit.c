@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 19:47:02 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 20:41:25 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,18 @@ char	**ft_strsplit(char const *s, char c)
 	char	*substring_end;
 	size_t	idx;
 
+	idx = 0;
 	while (s[idx])
 	{
 		while (s[idx] && s[idx] == c)
 			idx++;
-		substring_end = ft_strchr(s[idx], c);
+		substring_end = ft_strchr(&s[idx], c);
 
 		idx++;
 	}	
 	ft_strchr(s, c);
+	fresh_array = 0;
+	return fresh_array;
 }
 
 /*

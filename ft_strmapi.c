@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 17:04:38 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 20:39:25 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
 		idx = 0;
 		while(idx < len)
 		{
-			fresh[idx] = f(idx, &s[idx]);
+			fresh[idx] = f(idx, s[idx]);
 			idx++;
 		}
 	}

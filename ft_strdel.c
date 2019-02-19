@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 16:42:23 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 20:38:15 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@
 
 void	ft_strdel(char **as)
 {
-	ft_memdel(as);
+	ft_memdel((void **)as);
 }

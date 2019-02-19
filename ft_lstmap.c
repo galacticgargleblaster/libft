@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 20:16:25 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 20:35:49 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Adds the element new at the beginning of the list.
+** Iterates a list lst and applies the function f to each link to create a
+** "fresh” list (using malloc(3)) resulting from the successive applications
+** of f. If the allocation fails, the function returns NULL.
 **
-** Param. #1 The address of a pointer to the first link of a list.
-** Param. #2 The link to add at the beginning of the list.
-** Return value None.
+** Param. #1 A pointer’s to the first link of a list.
+** Param. #2 The address of a function to apply to each link of a list.
+** Return value The new list.
 */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	new->next = *alst;
-	*alst = new;
+	//t_list **new_list;
+	t_list *elem;
+
+	while (lst)
+	{
+		elem = f(lst);		
+		lst = lst->next;
+	}
+	return elem;
 }

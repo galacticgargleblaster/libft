@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 16:36:00 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/18 20:36:31 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memalloc(size_t size)
 {

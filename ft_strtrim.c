@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 17:20:28 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/20 22:58:26 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,12 @@ char	*ft_strtrim(char const *s)
 	while (s[start_idx] && IS_WHITESPACE(s[start_idx]))
 		start_idx++;
 	len = 0;
-	while (s[start_idx + len] && !IS_WHITESPACE(s[start_idx + len]))
+	while (s[start_idx + len])
 		len++;
+	len--;
+	while (len && IS_WHITESPACE(s[start_idx + len]))
+		len--;
+	len++;
 	fresh = ft_strnew(len);
 	fresh = ft_strncpy(fresh, &s[start_idx], len);
 	return (fresh);

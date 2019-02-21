@@ -6,7 +6,7 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/17 23:26:06 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/21 13:47:30 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,4 +61,4 @@ test:
 	./scripts/build_and_run_tests.py
 	
 debug: CFLAGS += -g
-debug: all
+debug: fclean all

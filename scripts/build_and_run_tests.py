@@ -63,10 +63,8 @@ def assert_test_exists(function_name):
 
 	assert os.path.basename(filename) in os.listdir(TESTS_DIR), f"No {filename} found"
 
-def assert_test_passes(function_name):
-	pathlib.Path(TEST_EXECUTABLE_DIR).mkdir(parents=True, exist_ok=True)
+def assert_test_passes(test_source_file_path):
 
-	test_source_file_path = get_test_name(function_name)
 	test_source_file_basename = os.path.basename(test_source_file_path)
 	test_executable_path = os.path.join(
 		TEST_EXECUTABLE_DIR, 
@@ -97,13 +95,30 @@ def assert_test_passes(function_name):
 		subprocess.check_call(compilation_args, cwd=HERE)
 		subprocess.check_call(['lldb', test_executable_path], cwd=TEST_EXECUTABLE_DIR)
 
-	
-if __name__ == '__main__':
-	for function_name in sorted(FUNCTION_NAMES):
-		assert_definition_exists(function_name)
-	
-	for function_name in sorted(FUNCTION_NAMES):
-		assert_test_exists(function_name)
 
-	for function_name in sorted(FUNCTION_NAMES):
-		assert_test_passes(function_name)
+import argparse
+
+if __name__ == '__main__':
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument("test_name", default="")
+	arguments = parser.parse_args()
+	#for function_name in sorted(FUNCTION_NAMES):
+	#	assert_definition_exists(function_name)
+	#
+	#for function_name in sorted(FUNCTION_NAMES):
+	#	assert_test_exists(function_name)
+	#
+	test_files = sorted(os.listdir(TESTS_DIR))
+
+	if arguments.test_name:
+		test_files = list(filter(lambda name: arguments.test_name in name, test_files))
+		if test_files:
+			expr = '\n'.join(test_files)
+			print(f"running subset of tests: \n{expr}")
+		else:
+			print(f"no files matching string {arguments.test_name}")
+			sys.exit(-1)
+
+	for source_file in test_files:
+		assert_test_passes(os.path.join(TESTS_DIR, source_file))

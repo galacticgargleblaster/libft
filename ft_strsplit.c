@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 20:41:25 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/21 14:10:14 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,35 +24,52 @@
 */
 
 #include "libft.h"
+#include <stdlib.h>
 
-struct	substring_s
+static		t_list **find_substrings(char const *s, char c)
 {
-		char	*start;
-		size_t	len;
-};
+	t_list	**substrings;
+	char	*substring;
+	size_t	idx;
+	size_t	len;
+
+	idx = 0;
+	len = 0;
+	substrings = NULL;
+	while (s[idx])
+	{
+		if (s[idx] == c)
+		{
+			if (len)
+			{
+				substring = ft_strnew(len);
+				ft_strncpy(substring, &s[idx], len);
+				ft_lstadd(substrings, ft_lstnew(substring, len + 1));
+			}
+			len = 0;
+		}
+		else
+			len++;
+		idx++;
+	}
+	return (substrings);
+}
 
 char	**ft_strsplit(char const *s, char c)
 {
-	char	**fresh_array;
-	char	*substring_end;
-	size_t	idx;
+	char			**fresh_array;
+	size_t			idx;
+	size_t			wc;
 
 	idx = 0;
+	wc = 0;
 	while (s[idx])
 	{
-		while (s[idx] && s[idx] == c)
-			idx++;
-		substring_end = ft_strchr(&s[idx], c);
-
+		if (s[idx] != c && idx > 0 && s[idx - 1] == c)
 		idx++;
-	}	
-	ft_strchr(s, c);
-	fresh_array = 0;
+		idx++;
+	}
+	find_substrings(s, c);
+	fresh_array =  0;
 	return fresh_array;
 }
-
-/*
-** 	Does this need two iterations over the string?
-**	Yes -- Need to know how many substrings there are before malloc'ing the array
-**	This will be easier to implement with some list types...
-*/

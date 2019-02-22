@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/21 14:20:44 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/21 21:38:53 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,7 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
+char			*ft_itoa_base(int value, int base);
 
 /*
 **	LIST FUNCTIONS
@@ -121,7 +122,7 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int				ft_lstlen(t_list **lst);
-
-void			ft_lstpush(t_list **list_head, void *content, size_t content_size);
+void			ft_lstpush(t_list **list_head, void const *content, size_t content_size);
+void			*ft_lstpop(t_list **list_head);
 
 #endif

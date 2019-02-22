@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 20:24:52 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/21 21:38:23 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,5 @@
 
 char	*ft_itoa(int n)
 {
-	long	tmpn;
-	long	len;
-	char	*str;
-
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	tmpn = (long)n;
-	len = 2;
-	while (tmpn /= 10)
-		len++;
-	len += (n < 0);
-	if ((str = (char*)malloc(sizeof(char) * len)) == NULL)
-		return (NULL);
-	str[--len] = '\0';
-	while (len--)
-	{
-		str[len] = n % 10 + '0';
-		n = n / 10;
-	}
-	if (n < 0)
-		str[0] = '-';
-	return (str);
+	return (ft_itoa_base(n, 10));
 }

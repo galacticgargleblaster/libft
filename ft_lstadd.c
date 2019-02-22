@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/21 14:13:36 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/21 21:21:10 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (new == NULL)
+	if (new == NULL || alst == NULL)
 		return ;
-	if (alst == NULL)
-		alst = &new;
 	else if (*alst == NULL)
 		*alst = new;
 	else

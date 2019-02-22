@@ -101,7 +101,7 @@ import argparse
 if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
-	parser.add_argument("test_name", default="")
+	parser.add_argument("-test_name")
 	arguments = parser.parse_args()
 	#for function_name in sorted(FUNCTION_NAMES):
 	#	assert_definition_exists(function_name)

@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include "../libft.h"
 
 int main()
 {
-	//assert(strcmp(ft_itoa(-12312983192), "-12312983192") == 0);
-	NOOP();
+	char *str = ft_itoa(-123129);
+	assert(strcmp(str, "-123129") == 0);
 }

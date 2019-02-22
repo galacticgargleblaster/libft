@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 15:19:34 by nkirkby           #+#    #+#             */
-/*   Updated: 2018/09/27 12:52:45 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/21 21:42:06 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #define IS_SEPARATOR(C) ((C == ' ')||(C == '\t')||(C == '\r')||(C == '\n'))
 #define IS_NOT_SEPARATOR(C) (!(IS_SEPARATOR(C)))
 
-int		count_words(const char *str)
+static int	count_words(const char *str)
 {
 	int i;
 	int wc;
@@ -51,7 +51,7 @@ int		count_words(const char *str)
 ** and the characters are copied.
 */
 
-char	*copy_word(char **src)
+static char	*copy_word(char **src)
 {
 	int		n_chars;
 	int		i;
@@ -76,7 +76,7 @@ char	*copy_word(char **src)
 	return (dst);
 }
 
-char	**ft_split_whitespaces(char *str)
+char		**ft_split_whitespaces(char *str)
 {
 	char	**words;
 	char	*str_idx;

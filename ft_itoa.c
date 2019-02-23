@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/21 21:38:23 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 13:29:56 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-
-char	*ft_itoa(int n)
+char *ft_itoa(int n)
 {
 	return (ft_itoa_base(n, 10));
 }

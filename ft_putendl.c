@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 19:56:27 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 13:29:07 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putendl_fd(s, 1);		
+	ft_putendl_fd(s, 1);
 }

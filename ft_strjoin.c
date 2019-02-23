@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 21:13:24 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 13:36:43 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’,
 ** result of the concatenation of s1 and s2. If the allocation fails the
 ** function returns NULL.
-** 
+**
 ** Param. #1 The prefix string.
 ** Param. #2 The suffix string.
 ** Return value The “fresh” string result of the concatenation of the 2 strings

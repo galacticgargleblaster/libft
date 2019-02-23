@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 21:04:41 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 13:38:31 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*fresh;
 	size_t	len;
@@ -37,12 +37,12 @@ char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
 		if (fresh)
 		{
 			idx = 0;
-			while(idx < len)
+			while (idx < len)
 			{
 				fresh[idx] = f(idx, s[idx]);
 				idx++;
 			}
 		}
 	}
-	return fresh;
+	return (fresh);
 }

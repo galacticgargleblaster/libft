@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 21:10:44 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 13:28:05 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	sub = NULL;
 	if (s)
 	{
-		if((sub = ft_strnew(len)))
+		if ((sub = ft_strnew(len)))
 			ft_strncpy(sub, (s + start), len);
 	}
 	return (sub);

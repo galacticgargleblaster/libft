@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 12:12:50 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 13:17:17 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** Allocates (with malloc(3)) and returns an array of “fresh” strings (all
 ** ending with ’\0’, including the array itself) obtained by spliting s using
 ** the character c as a delimiter. If the allocation fails the function returns
-** NULL. Example: 
+** NULL. Example:
 ** ft_strsplit("*hello*fellow***students*", ’*’) returns the array
 ** ["hello", "fellow", "students"].
 **
@@ -26,11 +26,10 @@
 #include "libft.h"
 #include <stdlib.h>
 
-
-static		void	push_substring(t_list **substrings,
+static void		push_substring(t_list **substrings,
 					char const *start_addr, size_t len)
 {
-	char	*substring;
+	char		*substring;
 
 	substring = ft_strnew(len);
 	if (substring)
@@ -40,11 +39,11 @@ static		void	push_substring(t_list **substrings,
 	}
 }
 
-static		t_list *find_substrings(char const *s, char c)
+static t_list	*find_substrings(char const *s, char c)
 {
-	t_list	*substrings;
-	size_t	idx;
-	size_t	len;
+	t_list		*substrings;
+	size_t		idx;
+	size_t		len;
 
 	idx = 0;
 	len = 0;
@@ -66,16 +65,16 @@ static		t_list *find_substrings(char const *s, char c)
 	return (substrings);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char	**fresh_array;
-	size_t	len;
-	t_list	*substrings;
-	
+	char		**fresh_array;
+	size_t		len;
+	t_list		*substrings;
+
 	substrings = find_substrings(s, c);
 	len = ft_lstlen(&substrings);
 	fresh_array = malloc(sizeof(char*) * len);
 	while (len)
 		fresh_array[--len] = ft_lstpop(&substrings);
-	return fresh_array;
+	return (fresh_array);
 }

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 13:53:08 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 14:15:28 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 #define IS_NONPRINTING(X) ((X == '\t' || X == '\n' || X == '\v' || X == '\r'))
 #define IS_SPACE(X) (( X == ' ' || IS_NONPRINTING(X)))
 #define IS_SIGN(X) ((X == '+' || X == '-'))
-#define ABS(X) (X < 0 ? -X : X)
+#define ABS(X) ((X) < 0 ? -(X) : (X))
 
 static char		int_to_char(int i)
 {

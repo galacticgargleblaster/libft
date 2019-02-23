@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 20:35:49 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 12:06:57 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,19 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	//t_list **new_list;
-	t_list *elem;
+	t_list *copy;
+	t_list *ptr;
 
+	if (lst == NULL)
+		return (NULL);
+	ptr = f(lst);
+	lst = lst->next;
+	copy = ptr;
 	while (lst)
 	{
-		elem = f(lst);		
+		ptr->next = f(lst);
+		ptr = ptr->next;
 		lst = lst->next;
 	}
-	return elem;
+	return (copy);
 }

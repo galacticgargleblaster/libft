@@ -6,7 +6,7 @@
 #    By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/01 10:18:11 by nkirkby           #+#    #+#              #
-#    Updated: 2019/02/21 21:51:05 by nkirkby          ###   ########.fr        #
+#    Updated: 2019/02/22 12:23:02 by nkirkby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,6 @@ OBJECT_DIR := .o
 
 # object files, auto generated from source files
 OBJECTS := $(patsubst %,$(OBJECT_DIR)/%.o,$(basename $(SOURCE_BASENAMES)))
-
-# compilers (at least gcc and clang) don't create the subdirectories automatically
-$(shell mkdir -p $(dir $(OBJECTS)) >/dev/null)
 # ------------------------------------------------------------------------------#
 
 
@@ -47,11 +44,11 @@ $(NAME): $(OBJECTS)
 
 # https://stackoverflow.com/questions/38110010/pattern-rule-with-files-in-different-directories
 $(OBJECT_DIR)/%.o: $(SOURCE_DIR)/%.c $(INCLUDES)
+	$(shell mkdir -p $(dir $(OBJECTS)) >/dev/null)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-	/bin/rm -f $(OBJECTS)
-	/bin/rmdir $(OBJECT_DIR)
+	/bin/rm -rf $(OBJECT_DIR)
 
 fclean: clean
 	/bin/rm -f $(NAME)

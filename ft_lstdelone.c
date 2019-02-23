@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 20:34:05 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/22 13:12:44 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
 	del((*alst)->content, (*alst)->content_size);
 	free(*alst);
+	*alst = NULL;
 }

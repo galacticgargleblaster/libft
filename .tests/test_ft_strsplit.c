@@ -12,4 +12,9 @@ int main()
 	ASSERT_STR_EQUAL(split[0], "foo");
 	ASSERT_STR_EQUAL(split[1], "bar");
 	ASSERT_STR_EQUAL(split[2], "baz");
+
+
+	char str2[]  = "alone";
+	char **split2 = ft_strsplit(str2, '~');
+	ASSERT_STR_EQUAL(split2[0], "alone");
 %>

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/21 21:24:05 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 12:12:50 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,23 @@
 #include "libft.h"
 #include <stdlib.h>
 
+
+static		void	push_substring(t_list **substrings,
+					char const *start_addr, size_t len)
+{
+	char	*substring;
+
+	substring = ft_strnew(len);
+	if (substring)
+	{
+		ft_strncpy(substring, start_addr, len);
+		*substrings = ft_lstpush(*substrings, substring, len + 1);
+	}
+}
+
 static		t_list *find_substrings(char const *s, char c)
 {
 	t_list	*substrings;
-	char	*substring;
 	size_t	idx;
 	size_t	len;
 
@@ -41,17 +54,15 @@ static		t_list *find_substrings(char const *s, char c)
 		if (s[idx] == c)
 		{
 			if (len)
-			{
-				substring = ft_strnew(len);
-				ft_strncpy(substring, &s[idx - len], len);
-				ft_lstpush(&substrings, substring, len + 1);
-			}
+				push_substring(&substrings, &s[idx - len], len);
 			len = 0;
 		}
 		else
 			len++;
 		idx++;
 	}
+	if (len == idx)
+		push_substring(&substrings, s, len);
 	return (substrings);
 }
 

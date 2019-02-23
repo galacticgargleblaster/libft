@@ -13,4 +13,7 @@ int main()
 	char str2[] = "";
 	ASSERT_STR_EQUAL(ft_strtrim(str2), "");
 
+	char str3[] = "      ";
+	ASSERT_STR_EQUAL(ft_strtrim(str3), "");
+
 %>

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 13:17:17 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 17:02:57 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,26 +42,26 @@ static void		push_substring(t_list **substrings,
 static t_list	*find_substrings(char const *s, char c)
 {
 	t_list		*substrings;
-	size_t		idx;
-	size_t		len;
+	size_t		start;
+	size_t		end;
 
-	idx = 0;
-	len = 0;
+	start = 0;
 	substrings = NULL;
-	while (s[idx])
+	while (s[start])
 	{
-		if (s[idx] == c)
+		while (s[start] == c)
+			start++;
+		if (s[start] == '\0')
+			break ;
+		end = start;
+		while (s[end] && s[end] != c)
+			end++;
+		if (end > start)
 		{
-			if (len)
-				push_substring(&substrings, &s[idx - len], len);
-			len = 0;
+			push_substring(&substrings, &s[start], end - start);
+			start = end;
 		}
-		else
-			len++;
-		idx++;
 	}
-	if (len == idx)
-		push_substring(&substrings, s, len);
 	return (substrings);
 }
 
@@ -73,8 +73,12 @@ char			**ft_strsplit(char const *s, char c)
 
 	substrings = find_substrings(s, c);
 	len = ft_lstlen(&substrings);
-	fresh_array = malloc(sizeof(char*) * len);
-	while (len)
-		fresh_array[--len] = ft_lstpop(&substrings);
+	fresh_array = malloc(sizeof(char*) * (len + 1));
+	if (fresh_array)
+	{
+		ft_bzero(fresh_array, sizeof(char *) * (len + 1));
+		while (len)
+			fresh_array[--len] = ft_lstpop(&substrings);
+	}
 	return (fresh_array);
 }

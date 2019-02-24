@@ -34,9 +34,5 @@ int main()
 	assert(memcmp(other_lst->content, ts, sizeof(test_struct_t)) == 0);
 	assert(other_lst->next == NULL);
 	assert(other_lst->content_size == sizeof(test_struct_t));
-
-
-	t_list *hmm = ft_lstnew(NULL, 42);
-	assert(hmm == NULL);
 }
 	

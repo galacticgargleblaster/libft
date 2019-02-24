@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 14:15:28 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 19:17:00 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,23 @@ char			*ft_itoa_base(int value, int base)
 {
 	size_t		idx;
 	char		*buf;
+	char		*tmp;
 
 	if (base > 16 || base < 2)
 		return (0);
 	idx = number_of_digits_needed_to_express(value, base);
-	idx = (value < 0 ? idx + 1 : idx);
-	if ((buf = ft_memalloc(idx + 1)) == NULL)
+	if ((buf = ft_memalloc(idx + 1 + (value < 0))) == NULL)
 		return (NULL);
-	buf[0] = (value < 0 ? '-' : '\0');
-	while (buf[--idx] == 0)
+	if (value < 0)
 	{
-		buf[idx] = int_to_char(ABS(value % base));
+		buf[0] = '-';
+		tmp = buf + 1;
+	}
+	else
+		tmp = buf;
+	while (idx-- > 0)
+	{
+		tmp[idx] = int_to_char(ABS(value % base));
 		value /= base;
 	}
 	return (buf);

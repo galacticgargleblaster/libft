@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 17:02:57 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 17:18:36 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char			**ft_strsplit(char const *s, char c)
 	size_t		len;
 	t_list		*substrings;
 
+	if (s == NULL)
+		return (NULL);
 	substrings = find_substrings(s, c);
 	len = ft_lstlen(&substrings);
 	fresh_array = malloc(sizeof(char*) * (len + 1));

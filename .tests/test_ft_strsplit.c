@@ -23,5 +23,4 @@ int main()
 	char str3[] = " forever";
 	char **split3  = ft_strsplit(str3, ' ');
 	ASSERT_STR_EQUAL(split3[0], "forever");
-
 %>

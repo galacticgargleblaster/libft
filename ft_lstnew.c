@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 14:41:45 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 17:15:27 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,12 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	link = malloc(sizeof(t_list));
 	if (link)
 	{
-		link->content_size = content_size;
-		link->content = ft_memalloc(content_size);
 		link->next = NULL;
+		link->content_size = content_size;
+		if (content)
+			link->content = ft_memalloc(content_size);
+		else
+			link->content = NULL;
 		if (link->content)
 			ft_memcpy(link->content, content, content_size);
 	}

@@ -11,7 +11,6 @@ int main()
 	char *str = ft_itoa(-123129);
 	ASSERT_STR_EQUAL(str, "-123129");
 
-
 	char *str2 = ft_itoa(-2147483648);
 	ASSERT_STR_EQUAL(str2, "-2147483648");
 	
@@ -23,4 +22,7 @@ int main()
 
 	char *str5 = ft_itoa(-0);
 	ASSERT_STR_EQUAL(str5, "0");
+
+	char *str6 = ft_itoa(-623);
+	ASSERT_STR_EQUAL(str6, "-623");
 }

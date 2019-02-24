@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 21:02:40 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 18:43:31 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	len;
-	size_t	idx;
+	size_t			len;
+	unsigned int	idx;
 
-	if (s)
+	if (s && f)
 	{
 		len = ft_strlen(s);
 		idx = 0;

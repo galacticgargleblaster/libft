@@ -6,13 +6,13 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 13:05:50 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/23 18:34:57 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_idx;
 	size_t	src_idx;
@@ -27,5 +27,6 @@ size_t	ft_strlcat(char *restrict dst, const char *src, size_t dstsize)
 	{
 		dst[dst_idx++] = src[src_idx++];
 	}
+	dst[dst_idx] = '\0';
 	return (total_length);
 }

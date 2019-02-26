@@ -1,0 +1,1067 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r4p5.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Mon Feb 25 21:39:59 PST 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/libft/nkirkby
+
+= Git history ==================================================================
+$> git -C /var/folders/1s/k3c2kzws4mq94hp6xt2_kdkm0000gp/T/tmpWKkQW4/user log --pretty='%H - %an, %ad : %s'
+140dd0ee4193bf428e3fbfdfbcbcd47268e1a4bd - Nicholas Kirkby, Sat Feb 23 19:24:07 2019 -0800 : temporarily removing tests
+c9568b777a9b98bf9a79c23a4253f7c7b54349c0 - Nicholas Kirkby, Sat Feb 23 19:18:09 2019 -0800 : fixing size_t underflow bug in ft_itoa
+cbb1294a7c7f9129f68e0723798e499d2ebef0c9 - Nicholas Kirkby, Sat Feb 23 18:45:49 2019 -0800 : fixing bugs exposed via qperez maintest
+a4407e2e0087d2600ba5e11ea7623ecc232a8dad - Nicholas Kirkby, Sat Feb 23 17:46:09 2019 -0800 : fixing lstnew for 0 content_size case
+cdca06bec55d31151917f1b0db261dfdcd07a4c3 - Nicholas Kirkby, Sat Feb 23 17:19:28 2019 -0800 : protecting against NULL in strtrim and strsplit
+5bb2d9f6e3a35bfc51e05018d093ceaf12ce75be - Nicholas Kirkby, Sat Feb 23 17:16:26 2019 -0800 : fixing lstnew for NULL content case
+3361aed0983f3283f2804339a8f2b8bdab2d98e6 - Nicholas Kirkby, Sat Feb 23 17:04:03 2019 -0800 : fixing bug in strsplit
+6b14f015a1cc87a845bc7af3be6d3f11788838ed - Nicholas Kirkby, Sat Feb 23 14:16:12 2019 -0800 : fixing edge case in ft_itoa
+2221ad458fd893102d07a20d33d17347fd277d7a - Nicholas Kirkby, Sat Feb 23 13:53:58 2019 -0800 : fixing norm
+ec77541c5db25796b785d800d26cd44ac8632bba - Nicholas Kirkby, Sat Feb 23 13:40:16 2019 -0800 : adding untracked tests and source files
+fbaa1cbfe5ad3801ce56cb006b7de3f725bb62eb - Nicholas Kirkby, Sat Feb 23 13:39:35 2019 -0800 : applying norm
+0fffa9001da5999da32aaea129d1aea93601bd31 - Nicholas Kirkby, Sat Feb 23 13:04:17 2019 -0800 : fixing list functions and cleaning up itoa
+ceaeb383e156fa7c5b229fff5efd6a676a2517a4 - Nicholas Kirkby, Thu Feb 21 21:54:33 2019 -0800 : fixing ft_itoa, strsplit, and removing the .o directory with make clean
+7e8491f6d4df54567d13b5563d7124ce3bb36a17 - Nicholas Kirkby, Thu Feb 21 14:54:08 2019 -0800 : fixing some list functions
+c01867529be90053a2fbe746131016a6a5357841 - Nicholas Kirkby, Thu Feb 21 14:20:22 2019 -0800 : trying lstlen experimetn
+df409dd793cf8aa0f8c1d2f9d23845c2c5cc52f2 - Nicholas Kirkby, Mon Feb 18 21:14:08 2019 -0800 : adding more null protection
+cf5f35452564d965ec0f5c9137f7ae74451346df - Nicholas Kirkby, Mon Feb 18 21:02:02 2019 -0800 : using libft-unit-test's suggestion to protect functions from null pointers
+eb4ead47aa9595dbbab3d4c510c525cffe5ea66c - Nicholas Kirkby, Mon Feb 18 20:50:16 2019 -0800 : filling out list functions
+76b72f8f15d6ca014bdce5a74d31d402b824bd85 - Nicholas Kirkby, Mon Feb 18 19:58:59 2019 -0800 : populating string-related functions
+14c623b10a5bbe7a8c7f93539689dd70317a4e5b - Nicholas Kirkby, Mon Feb 18 16:54:29 2019 -0800 : making regex greedier such that it grabs signatures containing function pointers
+c4eff489dd611f772d9ea023cbd50adf93cb6793 - Nicholas Kirkby, Mon Feb 18 16:28:53 2019 -0800 : adding tooling and function templates generated from header file
+1820a443836978c11ed2751199928a1d4c8cdd72 - Nicholas Kirkby, Mon Feb 18 15:29:41 2019 -0800 : fixing ft_atoi for LONG_MAX inputs
+2c7d9f987259b0b29d589ef1c7250be48cc6ae38 - Nicholas Kirkby, Mon Feb 18 14:42:42 2019 -0800 : fixing ft_atoi case with leading whitespace
+681d7ea6cba35b25d971b9e7c9d1b5613190ac47 - Nicholas Kirkby, Mon Feb 18 03:31:47 2019 -0800 : adding leading whitespace testcase for ft_atoi
+0f2e4bc526c064f5eded2f257d01f06bd50012c8 - Nicholas Kirkby, Mon Feb 18 03:24:09 2019 -0800 : fixing ft_strnstr
+7a16e08adf485ce4d2dcbfcac0610f0e60bab5c1 - Nicholas Kirkby, Mon Feb 18 03:04:11 2019 -0800 : fixing string functions
+dee4baec562bc67ee6d4c409edfa3b31076456d2 - Nicholas Kirkby, Mon Feb 18 00:20:11 2019 -0800 : breaking ft_itoa -- needs test
+e5d07ce3595d9fc558e9812926e08b9dc253cb4d - Nicholas Kirkby, Mon Feb 18 00:14:23 2019 -0800 : removing header generation script
+f64dcc964682c70433201cf9f6d7dbf0037b14ca - Nicholas Kirkby, Mon Feb 18 00:13:43 2019 -0800 : adding all libft functions to header
+6f674120112e7dd84a0c5f8d9c5b6275e5fafce4 - Nicholas Kirkby, Sun Feb 17 23:50:47 2019 -0800 : adding debug option to Makefile, updating tests
+f13c858901261aa8fa72bd2e97f2e5586d657afe - Nicholas Kirkby, Sun Feb 17 21:08:25 2019 -0800 : added hook for lldb when a test fails to run
+3671c8157c31593187b978a4ecfbab03849751e9 - Nicholas Kirkby, Sun Feb 17 17:18:25 2019 -0800 : adding tests, updating manpage parser to ignore restrict
+704dd930edb3e8cbe1d6d8b36a11bfd39bf8ae37 - Nicholas Kirkby, Sat Feb 16 15:58:48 2019 -0800 : unhiding scripts
+58568a57344be3748e71470b2ef98dfcb0f62669 - Nicholas Kirkby, Sat Feb 16 11:58:31 2019 -0800 : sed -i '' -e "s;../libft.h;libft.h;g" *.c
+60ea25a4a3381b597cbd08c20759a384d21555a7 - Nicholas Kirkby, Sat Feb 16 11:39:02 2019 -0800 : moving source files into library root
+77e88fe32c43cf4ef2af5e9d3755e655763a3837 - Nicholas Kirkby, Sat Feb 16 11:34:59 2019 -0800 : fixing signatures on strncpy and itoa
+79eb8f1cba346300d414f00ee33fa768e1c2718e - Nicholas Kirkby, Sat Feb 16 11:32:07 2019 -0800 : tuning regexes and adding test for regex
+177b015dcf087cd38bda77b4edbe537d85cc19a3 - Nicholas Kirkby, Fri Feb 15 14:03:19 2019 -0800 : regex improving but still broken
+890b5085e191b3eb7b821c1db7701c4f0b9f0a5c - Nicholas Kirkby, Fri Feb 15 11:55:49 2019 -0800 : all functions populated
+bb43a96bc90f6625196cd5deb578b5aa6ecf8497 - Nicholas Kirkby, Fri Feb 15 10:09:00 2019 -0800 : adding a few functions, noticed the manpage parser is broken
+9ca00a16dfee09b20bc1ad155a74cd72b2e937f8 - Nicholas Kirkby, Thu Feb 14 18:57:57 2019 -0800 : filling out a couple of functions
+66ea28a742e1955559a55e9f26c14b851dc1dbc0 - Nicholas Kirkby, Thu Feb 14 17:56:52 2019 -0800 : sort functions in header
+30ab093898ad3ea80e37ae87c3ef0bdfd5ab2ea8 - Nicholas Kirkby, Thu Feb 14 17:47:27 2019 -0800 : fixing function signatures such that they contain variable names
+e8286edc47df983f3d51273fa9017d4eda63ac45 - Nicholas Kirkby, Thu Feb 14 16:58:47 2019 -0800 : refactoring scripts
+20d24180d6a7046683c5c7c4ce87f3339765bf7e - Nicholas Kirkby, Thu Feb 14 12:22:59 2019 -0800 : automatic stub generation for function defns, grepped from manpages
+fc8f779537f8b78caecf52a2ddfef147e6bcf66c - Nicholas Kirkby, Wed Feb 13 22:13:22 2019 -0800 : fixed error in which object files are all derived from a single source file
+384b10990aedd8deded632f8b4c09fd7787b05ea - Nicholas Kirkby, Wed Feb 13 21:41:43 2019 -0800 : adding a bunch of empty tests
+3a4df65cd10faad5f1e888febc92c58f82d06feb - Nicholas Kirkby, Wed Feb 13 15:04:54 2019 -0800 : rm unneeded comment
+265330c15440f50fc996bd1a17be8a9ba171023b - Nicholas Kirkby, Wed Feb 13 15:01:34 2019 -0800 : naive dependency tracking, recompiles every time the header file is changed
+f709f8245fcd732672844852b3897bb07b4ab675 - Nicholas Kirkby, Wed Feb 13 13:19:13 2019 -0800 : checking for existence of tests in rules.py
+338fc8637d084f3b725300abb9a3248a1a829f5f - Nicholas Kirkby, Wed Feb 13 13:16:45 2019 -0800 : removing default suffix rule from makefile, globbing all sources together
+9b87278b2084301ba8c17aecde84f9b69a263f01 - Nicholas Kirkby, Tue Feb 12 18:18:20 2019 -0800 : adding rules script
+560f1e0d61a0a3c21a8e94de38c3409c35fda46c - Nicholas Kirkby, Tue Feb 12 17:50:17 2019 -0800 : adding author file
+af945b386faac719077eb79dcd07c468288f41f6 - Nicholas Kirkby, Tue Feb 12 17:43:49 2019 -0800 : adding functions from piscine
+
+= Collected files ==========================================
+$> ls -lAR /var/folders/1s/k3c2kzws4mq94hp6xt2_kdkm0000gp/T/tmpWKkQW4/user
+total 640
+-rw-r--r--  1 deepthought  deepthought     21 Feb 25 21:40 .gitignore
+-rw-r--r--  1 deepthought  deepthought   2324 Feb 25 21:40 Makefile
+-rw-r--r--  1 deepthought  deepthought  37772 Feb 25 21:40 __GIT_HISTORY
+-rw-r--r--  1 deepthought  deepthought      8 Feb 25 21:40 author
+-rw-r--r--  1 deepthought  deepthought   2628 Feb 25 21:40 ft_atoi.c
+-rw-r--r--  1 deepthought  deepthought    990 Feb 25 21:40 ft_bzero.c
+-rw-r--r--  1 deepthought  deepthought    980 Feb 25 21:40 ft_isalnum.c
+-rw-r--r--  1 deepthought  deepthought    961 Feb 25 21:40 ft_isalpha.c
+-rw-r--r--  1 deepthought  deepthought    972 Feb 25 21:40 ft_isascii.c
+-rw-r--r--  1 deepthought  deepthought    961 Feb 25 21:40 ft_isdigit.c
+-rw-r--r--  1 deepthought  deepthought   1168 Feb 25 21:40 ft_isprint.c
+-rw-r--r--  1 deepthought  deepthought   1352 Feb 25 21:40 ft_itoa.c
+-rw-r--r--  1 deepthought  deepthought   2245 Feb 25 21:40 ft_itoa_base.c
+-rw-r--r--  1 deepthought  deepthought   1304 Feb 25 21:40 ft_lstadd.c
+-rw-r--r--  1 deepthought  deepthought   1369 Feb 25 21:40 ft_lstcpy.c
+-rw-r--r--  1 deepthought  deepthought   1570 Feb 25 21:40 ft_lstdel.c
+-rw-r--r--  1 deepthought  deepthought   1577 Feb 25 21:40 ft_lstdelone.c
+-rw-r--r--  1 deepthought  deepthought   1240 Feb 25 21:40 ft_lstiter.c
+-rw-r--r--  1 deepthought  deepthought   1240 Feb 25 21:40 ft_lstlen.c
+-rw-r--r--  1 deepthought  deepthought   1564 Feb 25 21:40 ft_lstmap.c
+-rw-r--r--  1 deepthought  deepthought   1960 Feb 25 21:40 ft_lstnew.c
+-rw-r--r--  1 deepthought  deepthought   1397 Feb 25 21:40 ft_lstpop.c
+-rw-r--r--  1 deepthought  deepthought   1449 Feb 25 21:40 ft_lstpush.c
+-rw-r--r--  1 deepthought  deepthought   1338 Feb 25 21:40 ft_memalloc.c
+-rw-r--r--  1 deepthought  deepthought   1246 Feb 25 21:40 ft_memccpy.c
+-rw-r--r--  1 deepthought  deepthought   1140 Feb 25 21:40 ft_memchr.c
+-rw-r--r--  1 deepthought  deepthought   1186 Feb 25 21:40 ft_memcmp.c
+-rw-r--r--  1 deepthought  deepthought   1106 Feb 25 21:40 ft_memcpy.c
+-rw-r--r--  1 deepthought  deepthought   1237 Feb 25 21:40 ft_memdel.c
+-rw-r--r--  1 deepthought  deepthought   1414 Feb 25 21:40 ft_memmove.c
+-rw-r--r--  1 deepthought  deepthought   1065 Feb 25 21:40 ft_memset.c
+-rw-r--r--  1 deepthought  deepthought    982 Feb 25 21:40 ft_putchar.c
+-rw-r--r--  1 deepthought  deepthought   1143 Feb 25 21:40 ft_putchar_fd.c
+-rw-r--r--  1 deepthought  deepthought   1107 Feb 25 21:40 ft_putendl.c
+-rw-r--r--  1 deepthought  deepthought   1159 Feb 25 21:40 ft_putendl_fd.c
+-rw-r--r--  1 deepthought  deepthought   1076 Feb 25 21:40 ft_putnbr.c
+-rw-r--r--  1 deepthought  deepthought   1412 Feb 25 21:40 ft_putnbr_fd.c
+-rw-r--r--  1 deepthought  deepthought    965 Feb 25 21:40 ft_putstr.c
+-rw-r--r--  1 deepthought  deepthought   1158 Feb 25 21:40 ft_putstr_fd.c
+-rw-r--r--  1 deepthought  deepthought   2287 Feb 25 21:40 ft_split_whitespaces.c
+-rw-r--r--  1 deepthought  deepthought   1082 Feb 25 21:40 ft_strcat.c
+-rw-r--r--  1 deepthought  deepthought   1084 Feb 25 21:40 ft_strchr.c
+-rw-r--r--  1 deepthought  deepthought   1124 Feb 25 21:40 ft_strclr.c
+-rw-r--r--  1 deepthought  deepthought   1027 Feb 25 21:40 ft_strcmp.c
+-rw-r--r--  1 deepthought  deepthought   1070 Feb 25 21:40 ft_strcpy.c
+-rw-r--r--  1 deepthought  deepthought   1207 Feb 25 21:40 ft_strdel.c
+-rw-r--r--  1 deepthought  deepthought   1237 Feb 25 21:40 ft_strdup.c
+-rw-r--r--  1 deepthought  deepthought   1346 Feb 25 21:40 ft_strequ.c
+-rw-r--r--  1 deepthought  deepthought   1295 Feb 25 21:40 ft_striter.c
+-rw-r--r--  1 deepthought  deepthought   1434 Feb 25 21:40 ft_striteri.c
+-rw-r--r--  1 deepthought  deepthought   1504 Feb 25 21:40 ft_strjoin.c
+-rw-r--r--  1 deepthought  deepthought   1314 Feb 25 21:40 ft_strlcat.c
+-rw-r--r--  1 deepthought  deepthought   1012 Feb 25 21:40 ft_strlen.c
+-rw-r--r--  1 deepthought  deepthought   1575 Feb 25 21:40 ft_strmap.c
+-rw-r--r--  1 deepthought  deepthought   1648 Feb 25 21:40 ft_strmapi.c
+-rw-r--r--  1 deepthought  deepthought   1120 Feb 25 21:40 ft_strncat.c
+-rw-r--r--  1 deepthought  deepthought   1211 Feb 25 21:40 ft_strncmp.c
+-rw-r--r--  1 deepthought  deepthought   1119 Feb 25 21:40 ft_strncpy.c
+-rw-r--r--  1 deepthought  deepthought   1361 Feb 25 21:40 ft_strnequ.c
+-rw-r--r--  1 deepthought  deepthought   1329 Feb 25 21:40 ft_strnew.c
+-rw-r--r--  1 deepthought  deepthought   1352 Feb 25 21:40 ft_strnstr.c
+-rw-r--r--  1 deepthought  deepthought   1172 Feb 25 21:40 ft_strrchr.c
+-rw-r--r--  1 deepthought  deepthought   2556 Feb 25 21:40 ft_strsplit.c
+-rw-r--r--  1 deepthought  deepthought   1035 Feb 25 21:40 ft_strstr.c
+-rw-r--r--  1 deepthought  deepthought   1588 Feb 25 21:40 ft_strsub.c
+-rw-r--r--  1 deepthought  deepthought   1933 Feb 25 21:40 ft_strtrim.c
+-rw-r--r--  1 deepthought  deepthought    988 Feb 25 21:40 ft_swap.c
+-rw-r--r--  1 deepthought  deepthought    980 Feb 25 21:40 ft_tolower.c
+-rw-r--r--  1 deepthought  deepthought    980 Feb 25 21:40 ft_toupper.c
+-rw-r--r--  1 deepthought  deepthought   4886 Feb 25 21:40 libft.h
+drwxr-xr-x  7 deepthought  deepthought    238 Feb 25 21:40 scripts
+
+/var/folders/1s/k3c2kzws4mq94hp6xt2_kdkm0000gp/T/tmpWKkQW4/user/scripts:
+total 32
+-rw-r--r--  1 deepthought  deepthought     0 Feb 25 21:40 __init__.py
+-rwxr-xr-x  1 deepthought  deepthought  3330 Feb 25 21:40 build_and_run_tests.py
+-rwxr-xr-x  1 deepthought  deepthought  1338 Feb 25 21:40 build_function_templates.py
+-rw-r--r--  1 deepthought  deepthought  3147 Feb 25 21:40 core.py
+-rwxr-xr-x  1 deepthought  deepthought   275 Feb 25 21:40 test_core.py
+
+= libft_basics_1 ===============================================================
+/bin/rm -rf .o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+ar: creating archive libft.a
+/bin/rm -rf .o
+/bin/rm -f libft.a
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+ar: creating archive libft.a
+/bin/rm -rf .o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+-rw-r--r--  1 deepthought  deepthought  58632 Feb 25 21:40 libft.a
+
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_atoi.o test_ft_atoi.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_bzero.o test_ft_bzero.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_isalnum.o test_ft_isalnum.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_isalpha.o test_ft_isalpha.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_isascii.o test_ft_isascii.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_isdigit.o test_ft_isdigit.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_isprint.o test_ft_isprint.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memccpy.o test_ft_memccpy.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memchr.o test_ft_memchr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memcmp.o test_ft_memcmp.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memcpy.o test_ft_memcpy.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memmove.o test_ft_memmove.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memset.o test_ft_memset.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strcat.o test_ft_strcat.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strchr.o test_ft_strchr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strcmp.o test_ft_strcmp.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strcpy.o test_ft_strcpy.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strdup.o test_ft_strdup.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strlcat.o test_ft_strlcat.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strlen.o test_ft_strlen.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strncat.o test_ft_strncat.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strncmp.o test_ft_strncmp.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strncpy.o test_ft_strncpy.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strnstr.o test_ft_strnstr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strrchr.o test_ft_strrchr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strstr.o test_ft_strstr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_tolower.o test_ft_tolower.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_toupper.o test_ft_toupper.c
+gcc -Wall -Wextra -Werror -g3   -c -o main.o main.c
+gcc -Wall -Wextra -Werror -g3 -o test_lib -L. -lft test_ft_atoi.o test_ft_bzero.o test_ft_isalnum.o test_ft_isalpha.o test_ft_isascii.o test_ft_isdigit.o test_ft_isprint.o test_ft_memccpy.o test_ft_memchr.o test_ft_memcmp.o test_ft_memcpy.o test_ft_memmove.o test_ft_memset.o test_ft_strcat.o test_ft_strchr.o test_ft_strcmp.o test_ft_strcpy.o test_ft_strdup.o test_ft_strlcat.o test_ft_strlen.o test_ft_strncat.o test_ft_strncmp.o test_ft_strncpy.o test_ft_strnstr.o test_ft_strrchr.o test_ft_strstr.o test_ft_tolower.o test_ft_toupper.o main.o
+
+
+ft_atoi: [ok]
+ft_bzero: [ok]
+ft_isalnum: [ok]
+ft_isalpha: [ok]
+ft_isascii: [ok]
+ft_isdigit: [ok]
+ft_isprint: [ok]
+ft_memccpy: [ok]
+ft_memchr: [ok]
+ft_memcmp: [ok]
+ft_memcpy: [ok]
+ft_memmove: [ok]
+ft_memset: [ok]
+ft_strcat: [ok]
+ft_strchr: [ok]
+ft_strcmp: [ok]
+ft_strcpy: [ok]
+ft_strdup: [ok]
+ft_strlcat: [ok]
+ft_strlen: [ok]
+ft_strncat: [ok]
+ft_strncmp: [ok]
+ft_strncpy: [ok]
+ft_strnstr: [ok]
+ft_strrchr: [ok]
+ft_strstr: [ok]
+ft_tolower: [ok]
+ft_toupper: [ok]
+
+28/28 correct functions
+Grade: 60
+
+= libft_basics_2 ===============================================================
+total 544
+-rw-r--r--  1 deepthought  deepthought  2324 Feb 25 21:40 Makefile
+-rw-r--r--  1 deepthought  deepthought  2628 Feb 25 21:40 ft_atoi.c
+-rw-r--r--  1 deepthought  deepthought   990 Feb 25 21:40 ft_bzero.c
+-rw-r--r--  1 deepthought  deepthought   980 Feb 25 21:40 ft_isalnum.c
+-rw-r--r--  1 deepthought  deepthought   961 Feb 25 21:40 ft_isalpha.c
+-rw-r--r--  1 deepthought  deepthought   972 Feb 25 21:40 ft_isascii.c
+-rw-r--r--  1 deepthought  deepthought   961 Feb 25 21:40 ft_isdigit.c
+-rw-r--r--  1 deepthought  deepthought  1168 Feb 25 21:40 ft_isprint.c
+-rw-r--r--  1 deepthought  deepthought  1352 Feb 25 21:40 ft_itoa.c
+-rw-r--r--  1 deepthought  deepthought  2245 Feb 25 21:40 ft_itoa_base.c
+-rw-r--r--  1 deepthought  deepthought  1304 Feb 25 21:40 ft_lstadd.c
+-rw-r--r--  1 deepthought  deepthought  1369 Feb 25 21:40 ft_lstcpy.c
+-rw-r--r--  1 deepthought  deepthought  1570 Feb 25 21:40 ft_lstdel.c
+-rw-r--r--  1 deepthought  deepthought  1577 Feb 25 21:40 ft_lstdelone.c
+-rw-r--r--  1 deepthought  deepthought  1240 Feb 25 21:40 ft_lstiter.c
+-rw-r--r--  1 deepthought  deepthought  1240 Feb 25 21:40 ft_lstlen.c
+-rw-r--r--  1 deepthought  deepthought  1564 Feb 25 21:40 ft_lstmap.c
+-rw-r--r--  1 deepthought  deepthought  1960 Feb 25 21:40 ft_lstnew.c
+-rw-r--r--  1 deepthought  deepthought  1397 Feb 25 21:40 ft_lstpop.c
+-rw-r--r--  1 deepthought  deepthought  1449 Feb 25 21:40 ft_lstpush.c
+-rw-r--r--  1 deepthought  deepthought  1338 Feb 25 21:40 ft_memalloc.c
+-rw-r--r--  1 deepthought  deepthought  1246 Feb 25 21:40 ft_memccpy.c
+-rw-r--r--  1 deepthought  deepthought  1140 Feb 25 21:40 ft_memchr.c
+-rw-r--r--  1 deepthought  deepthought  1186 Feb 25 21:40 ft_memcmp.c
+-rw-r--r--  1 deepthought  deepthought  1106 Feb 25 21:40 ft_memcpy.c
+-rw-r--r--  1 deepthought  deepthought  1237 Feb 25 21:40 ft_memdel.c
+-rw-r--r--  1 deepthought  deepthought  1414 Feb 25 21:40 ft_memmove.c
+-rw-r--r--  1 deepthought  deepthought  1065 Feb 25 21:40 ft_memset.c
+-rw-r--r--  1 deepthought  deepthought   982 Feb 25 21:40 ft_putchar.c
+-rw-r--r--  1 deepthought  deepthought  1143 Feb 25 21:40 ft_putchar_fd.c
+-rw-r--r--  1 deepthought  deepthought  1107 Feb 25 21:40 ft_putendl.c
+-rw-r--r--  1 deepthought  deepthought  1159 Feb 25 21:40 ft_putendl_fd.c
+-rw-r--r--  1 deepthought  deepthought  1076 Feb 25 21:40 ft_putnbr.c
+-rw-r--r--  1 deepthought  deepthought  1412 Feb 25 21:40 ft_putnbr_fd.c
+-rw-r--r--  1 deepthought  deepthought   965 Feb 25 21:40 ft_putstr.c
+-rw-r--r--  1 deepthought  deepthought  1158 Feb 25 21:40 ft_putstr_fd.c
+-rw-r--r--  1 deepthought  deepthought  2287 Feb 25 21:40 ft_split_whitespaces.c
+-rw-r--r--  1 deepthought  deepthought  1082 Feb 25 21:40 ft_strcat.c
+-rw-r--r--  1 deepthought  deepthought  1084 Feb 25 21:40 ft_strchr.c
+-rw-r--r--  1 deepthought  deepthought  1124 Feb 25 21:40 ft_strclr.c
+-rw-r--r--  1 deepthought  deepthought  1027 Feb 25 21:40 ft_strcmp.c
+-rw-r--r--  1 deepthought  deepthought  1070 Feb 25 21:40 ft_strcpy.c
+-rw-r--r--  1 deepthought  deepthought  1207 Feb 25 21:40 ft_strdel.c
+-rw-r--r--  1 deepthought  deepthought  1237 Feb 25 21:40 ft_strdup.c
+-rw-r--r--  1 deepthought  deepthought  1346 Feb 25 21:40 ft_strequ.c
+-rw-r--r--  1 deepthought  deepthought  1295 Feb 25 21:40 ft_striter.c
+-rw-r--r--  1 deepthought  deepthought  1434 Feb 25 21:40 ft_striteri.c
+-rw-r--r--  1 deepthought  deepthought  1504 Feb 25 21:40 ft_strjoin.c
+-rw-r--r--  1 deepthought  deepthought  1314 Feb 25 21:40 ft_strlcat.c
+-rw-r--r--  1 deepthought  deepthought  1012 Feb 25 21:40 ft_strlen.c
+-rw-r--r--  1 deepthought  deepthought  1575 Feb 25 21:40 ft_strmap.c
+-rw-r--r--  1 deepthought  deepthought  1648 Feb 25 21:40 ft_strmapi.c
+-rw-r--r--  1 deepthought  deepthought  1120 Feb 25 21:40 ft_strncat.c
+-rw-r--r--  1 deepthought  deepthought  1211 Feb 25 21:40 ft_strncmp.c
+-rw-r--r--  1 deepthought  deepthought  1119 Feb 25 21:40 ft_strncpy.c
+-rw-r--r--  1 deepthought  deepthought  1361 Feb 25 21:40 ft_strnequ.c
+-rw-r--r--  1 deepthought  deepthought  1329 Feb 25 21:40 ft_strnew.c
+-rw-r--r--  1 deepthought  deepthought  1352 Feb 25 21:40 ft_strnstr.c
+-rw-r--r--  1 deepthought  deepthought  1172 Feb 25 21:40 ft_strrchr.c
+-rw-r--r--  1 deepthought  deepthought  2556 Feb 25 21:40 ft_strsplit.c
+-rw-r--r--  1 deepthought  deepthought  1035 Feb 25 21:40 ft_strstr.c
+-rw-r--r--  1 deepthought  deepthought  1588 Feb 25 21:40 ft_strsub.c
+-rw-r--r--  1 deepthought  deepthought  1933 Feb 25 21:40 ft_strtrim.c
+-rw-r--r--  1 deepthought  deepthought   988 Feb 25 21:40 ft_swap.c
+-rw-r--r--  1 deepthought  deepthought   980 Feb 25 21:40 ft_tolower.c
+-rw-r--r--  1 deepthought  deepthought   980 Feb 25 21:40 ft_toupper.c
+-rw-r--r--  1 deepthought  deepthought  4886 Feb 25 21:40 libft.h
+/bin/rm -rf .o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+ar: creating archive libft.a
+/bin/rm -rf .o
+/bin/rm -f libft.a
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+ar: creating archive libft.a
+/bin/rm -rf .o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+-rw-r--r--  1 deepthought  deepthought  58632 Feb 25 21:40 libft.a
+
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strnew.o test_ft_strnew.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strdel.o test_ft_strdel.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strclr.o test_ft_strclr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_striter.o test_ft_striter.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_striteri.o test_ft_striteri.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strmap.o test_ft_strmap.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strmapi.o test_ft_strmapi.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strequ.o test_ft_strequ.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strnequ.o test_ft_strnequ.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strsub.o test_ft_strsub.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strjoin.o test_ft_strjoin.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strtrim.o test_ft_strtrim.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_strsplit.o test_ft_strsplit.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_itoa.o test_ft_itoa.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putstr.o test_ft_putstr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putchar.o test_ft_putchar.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putendl.o test_ft_putendl.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putnbr.o test_ft_putnbr.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putchar_fd.o test_ft_putchar_fd.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putendl_fd.o test_ft_putendl_fd.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putnbr_fd.o test_ft_putnbr_fd.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_putstr_fd.o test_ft_putstr_fd.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memalloc.o test_ft_memalloc.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_memdel.o test_ft_memdel.c
+gcc -Wall -Wextra -Werror -g3   -c -o main.o main.c
+gcc -Wall -Wextra -Werror -g3 -o test_lib -L. -lft test_ft_strnew.o test_ft_strdel.o test_ft_strclr.o test_ft_striter.o test_ft_striteri.o test_ft_strmap.o test_ft_strmapi.o test_ft_strequ.o test_ft_strnequ.o test_ft_strsub.o test_ft_strjoin.o test_ft_strtrim.o test_ft_strsplit.o test_ft_itoa.o test_ft_putstr.o test_ft_putchar.o test_ft_putendl.o test_ft_putnbr.o test_ft_putchar_fd.o test_ft_putendl_fd.o test_ft_putnbr_fd.o test_ft_putstr_fd.o test_ft_memalloc.o test_ft_memdel.o main.o
+
+ft_memalloc: [ok]
+ft_memdel: [ok]
+ft_strnew: [ok]
+ft_strdel: [ok]
+ft_strclr: [ok]
+ft_striter: [ok]
+ft_striteri: [ok]
+ft_strmap: [ok]
+ft_strmapi: [ok]
+ft_strequ: [ok]
+ft_strnequ: [ok]
+ft_strsub: [ok]
+ft_strjoin: [ok]
+ft_strtrim: [ok]
+ft_strsplit: [ok]
+ft_itoa: [ok]
+ft_putchar: [ok]
+ft_putstr: [ok]
+ft_putendl: [ok]
+ft_putnbr: [ok]
+ft_putcharfd: [ok]
+ft_putstrfd: [ok]
+ft_putendlfd: [ok]
+ft_putnbrfd: [ok]
+
+24/24 correct functions
+Grade: 40
+
+= libft_bonus ==================================================================
+total 544
+-rw-r--r--  1 deepthought  deepthought  2324 Feb 25 21:40 Makefile
+-rw-r--r--  1 deepthought  deepthought  2628 Feb 25 21:40 ft_atoi.c
+-rw-r--r--  1 deepthought  deepthought   990 Feb 25 21:40 ft_bzero.c
+-rw-r--r--  1 deepthought  deepthought   980 Feb 25 21:40 ft_isalnum.c
+-rw-r--r--  1 deepthought  deepthought   961 Feb 25 21:40 ft_isalpha.c
+-rw-r--r--  1 deepthought  deepthought   972 Feb 25 21:40 ft_isascii.c
+-rw-r--r--  1 deepthought  deepthought   961 Feb 25 21:40 ft_isdigit.c
+-rw-r--r--  1 deepthought  deepthought  1168 Feb 25 21:40 ft_isprint.c
+-rw-r--r--  1 deepthought  deepthought  1352 Feb 25 21:40 ft_itoa.c
+-rw-r--r--  1 deepthought  deepthought  2245 Feb 25 21:40 ft_itoa_base.c
+-rw-r--r--  1 deepthought  deepthought  1304 Feb 25 21:40 ft_lstadd.c
+-rw-r--r--  1 deepthought  deepthought  1369 Feb 25 21:40 ft_lstcpy.c
+-rw-r--r--  1 deepthought  deepthought  1570 Feb 25 21:40 ft_lstdel.c
+-rw-r--r--  1 deepthought  deepthought  1577 Feb 25 21:40 ft_lstdelone.c
+-rw-r--r--  1 deepthought  deepthought  1240 Feb 25 21:40 ft_lstiter.c
+-rw-r--r--  1 deepthought  deepthought  1240 Feb 25 21:40 ft_lstlen.c
+-rw-r--r--  1 deepthought  deepthought  1564 Feb 25 21:40 ft_lstmap.c
+-rw-r--r--  1 deepthought  deepthought  1960 Feb 25 21:40 ft_lstnew.c
+-rw-r--r--  1 deepthought  deepthought  1397 Feb 25 21:40 ft_lstpop.c
+-rw-r--r--  1 deepthought  deepthought  1449 Feb 25 21:40 ft_lstpush.c
+-rw-r--r--  1 deepthought  deepthought  1338 Feb 25 21:40 ft_memalloc.c
+-rw-r--r--  1 deepthought  deepthought  1246 Feb 25 21:40 ft_memccpy.c
+-rw-r--r--  1 deepthought  deepthought  1140 Feb 25 21:40 ft_memchr.c
+-rw-r--r--  1 deepthought  deepthought  1186 Feb 25 21:40 ft_memcmp.c
+-rw-r--r--  1 deepthought  deepthought  1106 Feb 25 21:40 ft_memcpy.c
+-rw-r--r--  1 deepthought  deepthought  1237 Feb 25 21:40 ft_memdel.c
+-rw-r--r--  1 deepthought  deepthought  1414 Feb 25 21:40 ft_memmove.c
+-rw-r--r--  1 deepthought  deepthought  1065 Feb 25 21:40 ft_memset.c
+-rw-r--r--  1 deepthought  deepthought   982 Feb 25 21:40 ft_putchar.c
+-rw-r--r--  1 deepthought  deepthought  1143 Feb 25 21:40 ft_putchar_fd.c
+-rw-r--r--  1 deepthought  deepthought  1107 Feb 25 21:40 ft_putendl.c
+-rw-r--r--  1 deepthought  deepthought  1159 Feb 25 21:40 ft_putendl_fd.c
+-rw-r--r--  1 deepthought  deepthought  1076 Feb 25 21:40 ft_putnbr.c
+-rw-r--r--  1 deepthought  deepthought  1412 Feb 25 21:40 ft_putnbr_fd.c
+-rw-r--r--  1 deepthought  deepthought   965 Feb 25 21:40 ft_putstr.c
+-rw-r--r--  1 deepthought  deepthought  1158 Feb 25 21:40 ft_putstr_fd.c
+-rw-r--r--  1 deepthought  deepthought  2287 Feb 25 21:40 ft_split_whitespaces.c
+-rw-r--r--  1 deepthought  deepthought  1082 Feb 25 21:40 ft_strcat.c
+-rw-r--r--  1 deepthought  deepthought  1084 Feb 25 21:40 ft_strchr.c
+-rw-r--r--  1 deepthought  deepthought  1124 Feb 25 21:40 ft_strclr.c
+-rw-r--r--  1 deepthought  deepthought  1027 Feb 25 21:40 ft_strcmp.c
+-rw-r--r--  1 deepthought  deepthought  1070 Feb 25 21:40 ft_strcpy.c
+-rw-r--r--  1 deepthought  deepthought  1207 Feb 25 21:40 ft_strdel.c
+-rw-r--r--  1 deepthought  deepthought  1237 Feb 25 21:40 ft_strdup.c
+-rw-r--r--  1 deepthought  deepthought  1346 Feb 25 21:40 ft_strequ.c
+-rw-r--r--  1 deepthought  deepthought  1295 Feb 25 21:40 ft_striter.c
+-rw-r--r--  1 deepthought  deepthought  1434 Feb 25 21:40 ft_striteri.c
+-rw-r--r--  1 deepthought  deepthought  1504 Feb 25 21:40 ft_strjoin.c
+-rw-r--r--  1 deepthought  deepthought  1314 Feb 25 21:40 ft_strlcat.c
+-rw-r--r--  1 deepthought  deepthought  1012 Feb 25 21:40 ft_strlen.c
+-rw-r--r--  1 deepthought  deepthought  1575 Feb 25 21:40 ft_strmap.c
+-rw-r--r--  1 deepthought  deepthought  1648 Feb 25 21:40 ft_strmapi.c
+-rw-r--r--  1 deepthought  deepthought  1120 Feb 25 21:40 ft_strncat.c
+-rw-r--r--  1 deepthought  deepthought  1211 Feb 25 21:40 ft_strncmp.c
+-rw-r--r--  1 deepthought  deepthought  1119 Feb 25 21:40 ft_strncpy.c
+-rw-r--r--  1 deepthought  deepthought  1361 Feb 25 21:40 ft_strnequ.c
+-rw-r--r--  1 deepthought  deepthought  1329 Feb 25 21:40 ft_strnew.c
+-rw-r--r--  1 deepthought  deepthought  1352 Feb 25 21:40 ft_strnstr.c
+-rw-r--r--  1 deepthought  deepthought  1172 Feb 25 21:40 ft_strrchr.c
+-rw-r--r--  1 deepthought  deepthought  2556 Feb 25 21:40 ft_strsplit.c
+-rw-r--r--  1 deepthought  deepthought  1035 Feb 25 21:40 ft_strstr.c
+-rw-r--r--  1 deepthought  deepthought  1588 Feb 25 21:40 ft_strsub.c
+-rw-r--r--  1 deepthought  deepthought  1933 Feb 25 21:40 ft_strtrim.c
+-rw-r--r--  1 deepthought  deepthought   988 Feb 25 21:40 ft_swap.c
+-rw-r--r--  1 deepthought  deepthought   980 Feb 25 21:40 ft_tolower.c
+-rw-r--r--  1 deepthought  deepthought   980 Feb 25 21:40 ft_toupper.c
+-rw-r--r--  1 deepthought  deepthought  4886 Feb 25 21:40 libft.h
+/bin/rm -rf .o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+ar: creating archive libft.a
+/bin/rm -rf .o
+/bin/rm -f libft.a
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+ar: creating archive libft.a
+/bin/rm -rf .o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_atoi.c -o .o/ft_atoi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_bzero.c -o .o/ft_bzero.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalnum.c -o .o/ft_isalnum.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isalpha.c -o .o/ft_isalpha.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isascii.c -o .o/ft_isascii.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isdigit.c -o .o/ft_isdigit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_isprint.c -o .o/ft_isprint.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa.c -o .o/ft_itoa.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_itoa_base.c -o .o/ft_itoa_base.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstadd.c -o .o/ft_lstadd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstcpy.c -o .o/ft_lstcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdel.c -o .o/ft_lstdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstdelone.c -o .o/ft_lstdelone.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstiter.c -o .o/ft_lstiter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstlen.c -o .o/ft_lstlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstmap.c -o .o/ft_lstmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstnew.c -o .o/ft_lstnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpop.c -o .o/ft_lstpop.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_lstpush.c -o .o/ft_lstpush.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memalloc.c -o .o/ft_memalloc.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memccpy.c -o .o/ft_memccpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memchr.c -o .o/ft_memchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcmp.c -o .o/ft_memcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memcpy.c -o .o/ft_memcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memdel.c -o .o/ft_memdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memmove.c -o .o/ft_memmove.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_memset.c -o .o/ft_memset.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar.c -o .o/ft_putchar.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putchar_fd.c -o .o/ft_putchar_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl.c -o .o/ft_putendl.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putendl_fd.c -o .o/ft_putendl_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr.c -o .o/ft_putnbr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putnbr_fd.c -o .o/ft_putnbr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr.c -o .o/ft_putstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_putstr_fd.c -o .o/ft_putstr_fd.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_split_whitespaces.c -o .o/ft_split_whitespaces.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcat.c -o .o/ft_strcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strchr.c -o .o/ft_strchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strclr.c -o .o/ft_strclr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcmp.c -o .o/ft_strcmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strcpy.c -o .o/ft_strcpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdel.c -o .o/ft_strdel.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strdup.c -o .o/ft_strdup.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strequ.c -o .o/ft_strequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striter.c -o .o/ft_striter.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_striteri.c -o .o/ft_striteri.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strjoin.c -o .o/ft_strjoin.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlcat.c -o .o/ft_strlcat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strlen.c -o .o/ft_strlen.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmap.c -o .o/ft_strmap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strmapi.c -o .o/ft_strmapi.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncat.c -o .o/ft_strncat.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncmp.c -o .o/ft_strncmp.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strncpy.c -o .o/ft_strncpy.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnequ.c -o .o/ft_strnequ.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnew.c -o .o/ft_strnew.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strnstr.c -o .o/ft_strnstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strrchr.c -o .o/ft_strrchr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsplit.c -o .o/ft_strsplit.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strstr.c -o .o/ft_strstr.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strsub.c -o .o/ft_strsub.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_strtrim.c -o .o/ft_strtrim.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_swap.c -o .o/ft_swap.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_tolower.c -o .o/ft_tolower.o
+clang -c -Wall -Werror -Wextra -Ilibft.h ft_toupper.c -o .o/ft_toupper.o
+ar -r libft.a .o/ft_atoi.o .o/ft_bzero.o .o/ft_isalnum.o .o/ft_isalpha.o .o/ft_isascii.o .o/ft_isdigit.o .o/ft_isprint.o .o/ft_itoa.o .o/ft_itoa_base.o .o/ft_lstadd.o .o/ft_lstcpy.o .o/ft_lstdel.o .o/ft_lstdelone.o .o/ft_lstiter.o .o/ft_lstlen.o .o/ft_lstmap.o .o/ft_lstnew.o .o/ft_lstpop.o .o/ft_lstpush.o .o/ft_memalloc.o .o/ft_memccpy.o .o/ft_memchr.o .o/ft_memcmp.o .o/ft_memcpy.o .o/ft_memdel.o .o/ft_memmove.o .o/ft_memset.o .o/ft_putchar.o .o/ft_putchar_fd.o .o/ft_putendl.o .o/ft_putendl_fd.o .o/ft_putnbr.o .o/ft_putnbr_fd.o .o/ft_putstr.o .o/ft_putstr_fd.o .o/ft_split_whitespaces.o .o/ft_strcat.o .o/ft_strchr.o .o/ft_strclr.o .o/ft_strcmp.o .o/ft_strcpy.o .o/ft_strdel.o .o/ft_strdup.o .o/ft_strequ.o .o/ft_striter.o .o/ft_striteri.o .o/ft_strjoin.o .o/ft_strlcat.o .o/ft_strlen.o .o/ft_strmap.o .o/ft_strmapi.o .o/ft_strncat.o .o/ft_strncmp.o .o/ft_strncpy.o .o/ft_strnequ.o .o/ft_strnew.o .o/ft_strnstr.o .o/ft_strrchr.o .o/ft_strsplit.o .o/ft_strstr.o .o/ft_strsub.o .o/ft_strtrim.o 
+ .o/ft_swap.o .o/ft_tolower.o .o/ft_toupper.o
+-rw-r--r--  1 deepthought  deepthought  58632 Feb 25 21:40 libft.a
+
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_lstadd.o test_ft_lstadd.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_lstdel.o test_ft_lstdel.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_lstdelone.o test_ft_lstdelone.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_lstiter.o test_ft_lstiter.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_lstmap.o test_ft_lstmap.c
+gcc -Wall -Wextra -Werror -g3   -c -o test_ft_lstnew.o test_ft_lstnew.c
+gcc -Wall -Wextra -Werror -g3   -c -o main.o main.c
+gcc -Wall -Wextra -Werror -g3 -o test_lib -L. -lft test_ft_lstadd.o test_ft_lstdel.o test_ft_lstdelone.o test_ft_lstiter.o test_ft_lstmap.o test_ft_lstnew.o main.o
+
+ft_lstadd: [ok]
+ft_lstdel: [ok]
+ft_lstdelone: [ok]
+ft_lstdeliter: [ok]
+ft_lstmap: [ok]
+ft_lstnew: [ok]
+
+6/6 correct functions
+Grade: 25
+
+= Final grade: 125 =============================================================

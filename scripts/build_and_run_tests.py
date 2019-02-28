@@ -109,7 +109,12 @@ if __name__ == '__main__':
 	#for function_name in sorted(FUNCTION_NAMES):
 	#	assert_test_exists(function_name)
 	#
-	test_files = sorted(os.listdir(TESTS_DIR))
+	test_files = sorted([f for f in os.listdir(TESTS_DIR) if f.endswith(".c")])
+
+	try:
+		os.mkdir(TEST_EXECUTABLE_DIR)
+	except FileExistsError:
+		pass
 
 	if arguments.test_name:
 		test_files = list(filter(lambda name: arguments.test_name in name, test_files))

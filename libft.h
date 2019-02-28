@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 13:46:43 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/27 20:12:08 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,5 +127,6 @@ t_list				*ft_lstpush(t_list *lst, void const *content,
 								size_t content_size);
 void				*ft_lstpop(t_list **list_head);
 t_list				*ft_lstcpy(t_list *lst);
+void				*ft_lstnext(t_list *lst, int (f)(t_list *elem));
 
 #endif

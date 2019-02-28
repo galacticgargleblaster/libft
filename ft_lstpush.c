@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 11:22:46 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/28 14:57:20 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@
 
 #include "libft.h"
 
-t_list	*ft_lstpush(t_list *lst, void const *content, size_t content_size)
+t_list	*ft_lstpush(t_list *lst, void const *content)
 {
 	if (lst == NULL)
-		return (ft_lstnew(content, content_size));
+		return (ft_lstnewlink(content));
 	else
 	{
-		ft_lstadd(&lst, ft_lstnew(content, content_size));
+		ft_lstadd(&lst, ft_lstnewlink(content));
 		return (lst);
 	}
 }

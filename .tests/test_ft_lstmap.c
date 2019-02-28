@@ -11,7 +11,7 @@ t_list *times_two(t_list *elt)
 	t_list *new;
 
 	*content = *(int *)(elt->content) * 2;
-	new = ft_lstnew(content, sizeof(int));
+	new = ft_lstnewlink_copy(content, sizeof(int));
 	return (new);
 }
 
@@ -25,8 +25,8 @@ int main()
 	*foo = 4;
 	*bar = 21;
 
-	ft_lstadd(&lst, ft_lstnew(foo, sizeof(int)));
-	ft_lstadd(&lst, ft_lstnew(bar, sizeof(int)));
+	ft_lstadd(&lst, ft_lstnewlink(foo));
+	ft_lstadd(&lst, ft_lstnewlink(bar)); 
 
 
 	t_list *fresh_lst = ft_lstmap(lst, times_two);

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/18 20:35:03 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/28 14:02:50 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void	ft_lstdel(t_list **alst, void (*del)(void *))
 {
 	t_list	*link;
 
 	while (*alst)
 	{
 		link = *alst;
-		del(link->content, link->content_size);
+		del(link->content);
 		*alst = link->next;
 		free((void *)link);
 	}

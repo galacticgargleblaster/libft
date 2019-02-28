@@ -7,7 +7,10 @@
 
 void test(char *(function_under_test)(const char *s1))
 {
-	(void)function_under_test;
+	char *hmm = "Hmm..";
+	char *result = function_under_test(hmm);
+	assert(strcmp(result, hmm) == 0);
+	assert(result != hmm);
 }
 
 int main()

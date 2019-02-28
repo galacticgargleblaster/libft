@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/22 13:12:44 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/28 14:03:06 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+void	ft_lstdelone(t_list **alst, void (*del)(void*))
 {
-	del((*alst)->content, (*alst)->content_size);
+	del((*alst)->content);
 	free(*alst);
 	*alst = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 17:18:36 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/28 15:06:49 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void		push_substring(t_list **substrings,
 	if (substring)
 	{
 		ft_strncpy(substring, start_addr, len);
-		*substrings = ft_lstpush(*substrings, substring, len + 1);
+		*substrings = ft_lstpush(*substrings, substring);
 	}
 }
 

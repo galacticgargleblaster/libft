@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnewlink.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/22 13:36:22 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/28 14:56:19 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Param. #1 a pointer to the first link to be copied.
-** Return value the first link of the copied list.
+** Creates a new link, aliasing the argument content
 */
 
 #include "libft.h"
 #include <stdlib.h>
 
-t_list			*ft_lstcpy(t_list *lst)
+t_list	*ft_lstnewlink(void const *content)
 {
-	t_list	*elt;
-	t_list	*head;
+	t_list	*link;
 
-	if (lst == NULL)
-		return (NULL);
-	head = ft_lstnew(lst->content, lst->content_size);
-	head->next = NULL;
-	elt = head;
-	while (lst->next)
+	link = malloc(sizeof(t_list));
+	if (link)
 	{
-		lst = lst->next;
-		elt->next = ft_lstnew(lst->content, lst->content_size);
-		elt = elt->next;
+		link->next = NULL;
+		link->content = (void *)content;
 	}
-	return (head);
+	return (link);
 }

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/27 20:12:08 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/28 15:16:46 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@
 typedef struct		s_list
 {
 	void			*content;
-	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
@@ -77,7 +76,8 @@ char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
-char				*ft_strdup(const char *s1);
+char				*ft_strdup(const char *src);
+char				*ft_strndup(const char *s1, size_t n);
 size_t				ft_strlcat(char *restrict s1, const char *restrict s2,
 								size_t dstsize);
 size_t				ft_strlen(const char *s);
@@ -116,17 +116,21 @@ char				*ft_itoa_base(int value, int base);
 **	SINGLY LINKED LIST FUNCTIONS
 */
 
-t_list				*ft_lstnew(void const *content, size_t content_size);
-void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
-void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+t_list				*ft_lstnewlink_copy(void const *content, size_t content_size);
+t_list				*ft_lstnewlink(void const *content);
+void				ft_lstdelone(t_list **alst, void (*del)(void*));
+void				ft_lstdel(t_list **alst, void (*del)(void *));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_lstlen(t_list **lst);
-t_list				*ft_lstpush(t_list *lst, void const *content,
-								size_t content_size);
+t_list				*ft_lstpush(t_list *lst, void const *content);
 void				*ft_lstpop(t_list **list_head);
-t_list				*ft_lstcpy(t_list *lst);
 void				*ft_lstnext(t_list *lst, int (f)(t_list *elem));
+/*
+**  lstcpy is unuseful, consider making a lstalias to copy just the
+**	t_lst structs, or a lstdeepcpy(t_list *lst, void*(*cpy_content)(void *))
+**  to copy list and content.
+*/
 
 #endif

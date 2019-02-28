@@ -13,9 +13,9 @@ int main()
 	int *bar = malloc(sizeof(int));
 
 	assert(ft_lstlen(&lst) == 0);	
-	ft_lstadd(&lst, ft_lstnew(foo, sizeof(int)));
+	ft_lstadd(&lst, ft_lstnewlink(foo));
 	assert(ft_lstlen(&lst) == 1);	
-	ft_lstadd(&lst, ft_lstnew(bar, sizeof(int)));
+	ft_lstadd(&lst, ft_lstnewlink(bar));
 	assert(ft_lstlen(&lst) == 2);	
 }
 	

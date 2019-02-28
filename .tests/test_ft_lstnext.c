@@ -13,7 +13,7 @@ int ft_pedagogy_team_promotes(t_list *elt)
 		return (0);
 }
 
-#define PUSH_STRING(lst, str) (lst = ft_lstpush(lst, str, ft_strlen(str) + sizeof(char)))
+#define PUSH_STRING(lst, str) (lst = ft_lstpush(lst, str))
 
 int main()
 {

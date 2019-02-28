@@ -1,3 +1,5 @@
 *.a
 *.o
 .tests/*.out
+.test_output
+scripts/__pycache__

@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/28 15:16:46 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/02/28 18:40:45 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,7 @@ int					ft_lstlen(t_list **lst);
 t_list				*ft_lstpush(t_list *lst, void const *content);
 void				*ft_lstpop(t_list **list_head);
 void				*ft_lstnext(t_list *lst, int (f)(t_list *elem));
+void				*ft_lstremove(t_list **alst, void *content);
 /*
 **  lstcpy is unuseful, consider making a lstalias to copy just the
 **	t_lst structs, or a lstdeepcpy(t_list *lst, void*(*cpy_content)(void *))

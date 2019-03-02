@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/28 18:40:45 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/03/02 22:49:34 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 # define IS_UPPERCASE(X) ((X >= 'A') && (X <= 'Z'))
 # define IS_ALPHA(X) (IS_LOWERCASE(X) || IS_UPPERCASE(X))
 # define IS_DIGIT(X) ((X >= '0') && (X <= '9'))
-# define MAX(X, Y) (X > Y ? X : Y)
-# define MIN(X, Y) (X > Y ? Y : X)
+# define MAX(X, Y) ((X) > (Y) ? X : Y)
+# define MIN(X, Y) ((X) > (Y) ? Y : X)
 
 /*
 ** content :
@@ -116,7 +116,8 @@ char				*ft_itoa_base(int value, int base);
 **	SINGLY LINKED LIST FUNCTIONS
 */
 
-t_list				*ft_lstnewlink_copy(void const *content, size_t content_size);
+t_list				*ft_lstnewlink_copy(void const *content,
+								size_t content_size);
 t_list				*ft_lstnewlink(void const *content);
 void				ft_lstdelone(t_list **alst, void (*del)(void*));
 void				ft_lstdel(t_list **alst, void (*del)(void *));

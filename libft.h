@@ -6,7 +6,7 @@
 /*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/03/02 22:49:34 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/03/05 15:19:12 by nkirkby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # define IS_DIGIT(X) ((X >= '0') && (X <= '9'))
 # define MAX(X, Y) ((X) > (Y) ? X : Y)
 # define MIN(X, Y) ((X) > (Y) ? Y : X)
+# define NOT(X) (!(X))
 
 /*
 ** content :

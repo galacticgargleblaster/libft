@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/03/08 15:40:48 by marvin           ###   ########.fr       */
+/*   Updated: 2019/03/30 14:43:37 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,6 @@
 # define MAX(X, Y) ((X) > (Y) ? X : Y)
 # define MIN(X, Y) ((X) > (Y) ? Y : X)
 # define NOT(X) (!(X))
-
-/*
-** content :
-** The data contained in the link. The void * allows to store any kind of data.
-**
-** content_size :
-** The size of the data stored. The void * type doesn’t allow you to know the
-** size of the pointed data, as a consequence, it is necessary to save its size.
-** For instance, the size of the string "42" is 3 bytes and the 32bits integer
-** 42 has a size of 4 bytes.
-**
-** next : The next link’s address or NULL if it’s the last link.
-*/
-
-typedef struct		s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
 
 /*
 **	MEMORY MANIPULATION FUNCTIONS
@@ -72,7 +53,6 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
-char				**ft_strsplit(char const *s, char c);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
 int					ft_strcmp(const char *s1, const char *s2);
@@ -112,29 +92,5 @@ int					ft_toupper(int c);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int value, int base);
-
-/*
-**	SINGLY LINKED LIST FUNCTIONS
-*/
-
-t_list				*ft_lstnewlink_copy(void const *content,
-								size_t content_size);
-t_list				*ft_lstnewlink(void const *content);
-void				ft_lstdelone(t_list **alst, void (*del)(void*));
-void				ft_lstdel(t_list **alst, void (*del)(void *));
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstaddback(t_list **alst, t_list *new);
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-int					ft_lstlen(t_list **lst);
-t_list				*ft_lstpush(t_list *lst, void const *content);
-void				*ft_lstpop(t_list **list_head);
-void				*ft_lstnext(t_list *lst, int (f)(t_list *elem));
-void				*ft_lstremove(t_list **alst, void *content);
-/*
-**  lstcpy is unuseful, consider making a lstalias to copy just the
-**	t_lst structs, or a lstdeepcpy(t_list *lst, void*(*cpy_content)(void *))
-**  to copy list and content.
-*/
 
 #endif

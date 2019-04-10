@@ -6,7 +6,7 @@
 /*   By: student <student@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/03/30 14:43:37 by student          ###   ########.fr       */
+/*   Updated: 2019/04/09 23:07:35 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,7 @@ int					ft_toupper(int c);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int value, int base);
+char				*ft_lltoa_base(long long value, int base);
+char				*ft_ulltoa_base(unsigned long long value, int base);
 
 #endif

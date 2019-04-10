@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
+/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 13:47:10 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/04/09 23:26:22 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@
 
 #include "libft.h"
 #include <stdlib.h>
+
+char	*ft_itoa_base(int value, int base)
+{
+	return (ft_lltoa_base((long long)(value), base));
+}
 
 char	*ft_itoa(int n)
 {

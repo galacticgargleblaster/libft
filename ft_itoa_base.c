@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nkirkby <nkirkby@student.42.fr>            +#+  +:+       +#+        */
+/*   By: student <student@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/02/23 19:17:00 by nkirkby          ###   ########.fr       */
+/*   Updated: 2019/04/10 00:04:29 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char		int_to_char(int i)
 	return (c);
 }
 
-static size_t	number_of_digits_needed_to_express(int value, int base)
+static size_t	number_of_digits_needed_to_express(long long value, int base)
 {
 	size_t		size;
 
@@ -51,7 +51,7 @@ static size_t	number_of_digits_needed_to_express(int value, int base)
 	return (size);
 }
 
-char			*ft_itoa_base(int value, int base)
+char			*ft_lltoa_base(long long value, int base)
 {
 	size_t		idx;
 	char		*buf;
@@ -69,6 +69,40 @@ char			*ft_itoa_base(int value, int base)
 	}
 	else
 		tmp = buf;
+	while (idx-- > 0)
+	{
+		tmp[idx] = int_to_char(ABS(value % base));
+		value /= base;
+	}
+	return (buf);
+}
+
+static size_t	number_of_digits_needed_to_express_unsigned(
+						unsigned long long value, int base)
+{
+	size_t		size;
+
+	size = 0;
+	while (value || size == 0)
+	{
+		value /= base;
+		size += 1;
+	}
+	return (size);
+}
+
+char			*ft_ulltoa_base(unsigned long long value, int base)
+{
+	size_t		idx;
+	char		*buf;
+	char		*tmp;
+
+	if (base > 16 || base < 2)
+		return (0);
+	idx = number_of_digits_needed_to_express_unsigned(value, base);
+	if ((buf = ft_memalloc(idx + 1)) == NULL)
+		return (NULL);
+	tmp = buf;
 	while (idx-- > 0)
 	{
 		tmp[idx] = int_to_char(ABS(value % base));

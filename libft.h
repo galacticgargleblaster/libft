@@ -6,7 +6,7 @@
 /*   By: student <student@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/21 11:31:08 by nkirkby           #+#    #+#             */
-/*   Updated: 2019/04/10 22:01:48 by student          ###   ########.fr       */
+/*   Updated: 2019/05/11 22:12:41 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 								size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
+int					ft_endswith(const char *s, const char c);
 
 /*
 ** PRINTING FUNCTIONS
